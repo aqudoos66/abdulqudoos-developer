@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Abdul Qudoos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .about-text h2 {
+        font-size: 2rem;
+        color: var(--text-light);
+        margin-bottom: 1rem;
+      }
+      .about-text p {
+        color: var(--text-muted);
+        margin-bottom: 1.5rem;
+        font-size: 1.05rem;
+      }
+      .skills-section h3 {
+        font-size: 1.3rem;
+        margin: 2rem 0 1rem;
+      }
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1.5rem;
+      }
+      .skill-tags span {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 0.5rem 1.2rem;
+        border-radius: 100px;
+        border: 1px solid var(--border);
+        transition: var(--transition);
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      .skill-tags span:hover {
+        border-color: var(--primary);
+        color: var(--text-light);
+        transform: translateY(-2px);
+        background: rgba(129, 140, 248, 0.1);
+      }
+      .timeline-section h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: var(--text-light);
+      }
+      .timeline {
+        border-left: 2px solid var(--border-hover);
+        margin-left: 1rem;
+        padding-left: 1.5rem;
+      }
+      .timeline-item {
+        margin-bottom: 2.5rem;
+        position: relative;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -1.8rem;
+        top: 0.25rem;
+        width: 12px;
+        height: 12px;
+        background: var(--primary);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--primary-glow);
+      }
+      .timeline-date {
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .timeline-content h4 {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        margin-bottom: 0.5rem;
+      }
+      .timeline-content p {
+        color: var(--text-muted);
+      }
+      .social-links-about {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .social-links-about a {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-light);
+        font-size: 1.2rem;
+        transition: var(--transition);
+        text-decoration: none;
+      }
+      .social-links-about a:hover {
+        background: var(--primary);
+        border-color: var(--primary);
+        transform: translateY(-3px);
+      }
+
+      /* New gallery button style */
+      .gallery-btn-container {
+        margin-top: 2rem;
+        text-align: left;
+      }
+      .btn-gallery {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        background: rgba(129, 140, 248, 0.1);
+        border: 1px solid var(--primary);
+        color: var(--primary);
+        padding: 0.8rem 1.8rem;
+        border-radius: 40px;
+        font-weight: 600;
+        transition: var(--transition);
+        text-decoration: none;
+      }
+      .btn-gallery:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(129, 140, 248, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ambient-glow secondary"></div>
+    <header id="main-header"></header>
+    <main class="page-container">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h1>About Me</h1>
+          <p>Computer Science student & Backend Developer</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-text fade-in-up">
+            <h2>Professional Summary</h2>
+            <p>
+              I'm <strong>Abdul Qudoos</strong>, a Computer Science student at
+              Quaid-e-Awam University of Engineering, Science & Technology,
+              Nawabshah. I specialize in backend development using
+              <strong>Laravel, PHP, and MySQL</strong>. I build RESTful APIs,
+              database-driven systems, and full-stack web applications.
+            </p>
+            <p>
+              My published research on
+              <strong>Smart Conference Management System (SCMS)</strong>
+              demonstrates my ability to design integrated platforms with
+              role-based dashboards and automated workflows. I'm passionate
+              about clean code, database optimization, and solving real-world
+              problems through technology.
+            </p>
+
+            <div class="skills-section">
+              <h3>Technical Skills</h3>
+              <div class="skill-tags">
+                <span>Laravel</span><span>PHP (OOP)</span><span>MySQL</span
+                ><span>REST API</span> <span>Git & GitHub</span
+                ><span>HTML/CSS</span><span>JavaScript</span
+                ><span>MVC Architecture</span>
+              </div>
+
+              <h3>Tools & Platforms</h3>
+              <div class="skill-tags">
+                <span>Postman</span><span>phpMyAdmin</span><span>VS Code</span
+                ><span>GitHub</span> <span>Windows/Linux</span
+                ><span>Apache</span>
+              </div>
+            </div>
+
+            <div class="social-links-about">
+              <a href="https://github.com/aqudoos66" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/abdul-qudoos-896a3527b/"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://abdulqudoosmastoi-portfolio.free.nf/i=1"
+                target="_blank"
+                ><i class="fas fa-globe"></i
+              ></a>
+            </div>
+
+            <!-- Gallery Button Added Here -->
+            <div class="gallery-btn-container">
+              <a href="gallery.html" class="btn-gallery">
+                <i class="fas fa-images"></i> Visit My Gallery
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="timeline-section fade-in-up">
+            <h3>Experience & Education</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">2025 – Present</div>
+                <div class="timeline-content">
+                  <h4>Backend Developer (Laravel)</h4>
+                  <p>
+                    Sindh Tech Solutions — Developing backend modules, RESTful
+                    APIs, and MySQL databases. Using Git for collaboration.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">Jul 2024 – Sep 2024</div>
+                <div class="timeline-content">
+                  <h4>IT Intern</h4>
+                  <p>
+                    FFBL, Karachi — Gained hands-on experience in information
+                    technology operations and systems.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">2022 – Present</div>
+                <div class="timeline-content">
+                  <h4>B.E. Computer Science</h4>
+                  <p>QUEST Nawabshah — CGPA: Ongoing | EQF Level 6</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">2024</div>
+                <div class="timeline-content">
+                  <h4>Technical Domain (NFTP)</h4>
+                  <p>
+                    QUEST Nawabshah — Web development & database administration
+                    certification.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="main-footer"></footer>
+    <script src="common.js"></script>
+  </body>
+</html>

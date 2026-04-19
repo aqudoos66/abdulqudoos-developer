@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Abdul Qudoos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+      .gallery-item {
+        cursor: pointer;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: var(--transition);
+        position: relative;
+        border: 1px solid var(--border);
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        border-color: var(--primary);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      }
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+      .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        visibility: hidden;
+        opacity: 0;
+        transition: var(--transition);
+        backdrop-filter: blur(10px);
+      }
+      .lightbox.active {
+        visibility: visible;
+        opacity: 1;
+      }
+      .lightbox-img {
+        max-width: 90%;
+        max-height: 85%;
+        border-radius: 12px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+      }
+      .close-lightbox {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        color: white;
+        font-size: 45px;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      .close-lightbox:hover {
+        color: var(--primary);
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ambient-glow secondary"></div>
+    <header id="main-header"></header>
+    <main class="page-container">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h1>Gallery</h1>
+          <p>Project snapshots & development journey</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </main>
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-img" id="lightboxImg" alt="" />
+    </div>
+    <footer id="main-footer"></footer>
+    <script src="common.js"></script>
+    <script>
+      const images = [
+        "https://picsum.photos/id/20/800/600",
+        "https://picsum.photos/id/26/800/600",
+        "https://picsum.photos/id/0/800/600",
+        "https://picsum.photos/id/15/800/600",
+        "https://picsum.photos/id/1/800/600",
+        "https://picsum.photos/id/91/800/600",
+      ];
+      function buildGallery() {
+        const grid = document.getElementById("galleryGrid");
+        if (grid) {
+          grid.innerHTML = images
+            .map(
+              (src, idx) =>
+                `<div class="gallery-item fade-in-up" style="animation-delay:${idx * 0.1}s"><img src="${src}" alt="Project screenshot"></div>`,
+            )
+            .join("");
+          document.querySelectorAll(".gallery-item").forEach((item) => {
+            item.addEventListener("click", () => {
+              document.getElementById("lightboxImg").src =
+                item.querySelector("img").src;
+              document.getElementById("lightbox").classList.add("active");
+            });
+          });
+        }
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        buildGallery();
+        const lb = document.getElementById("lightbox");
+        document.querySelector(".close-lightbox").onclick = () =>
+          lb.classList.remove("active");
+        lb.onclick = (e) => {
+          if (e.target === lb) lb.classList.remove("active");
+        };
+      });
+    </script>
+  </body>
+</html>

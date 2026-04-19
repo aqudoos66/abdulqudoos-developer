@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Abdul Qudoos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient-glow"></div>
+    <header id="main-header"></header>
+    <main class="page-container">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h1>Projects</h1>
+          <p>Web applications and research systems I've built</p>
+        </div>
+        <div class="filter-bar fade-in-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Web">Web</button>
+          <button class="filter-btn" data-filter="Research">Research</button>
+          <button class="filter-btn" data-filter="Full Stack">
+            Full Stack
+          </button>
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </main>
+    <footer id="main-footer"></footer>
+    <script src="common.js"></script>
+    <script>
+      const projectsData = [
+        {
+          title: "Inventory Management System",
+          desc: "Web-based system for managing products, stock levels, and users. Includes RESTful APIs, authentication, and CRUD operations with database optimization.",
+          tech: "Laravel, MySQL, PHP, REST API",
+          image:
+            "img/projects/inventory-solutions abdul qudoos php developer.png",
+          category: "Full Stack",
+          link: "#",
+        },
+        {
+          title: "Smart Conference Management System (SCMS)",
+          desc: "Integrated platform for academic conferences with automatic website generation, AI-assisted reviews, role-based dashboards, and automated notifications. Published in IJIST.",
+          tech: "Laravel, MySQL, OpenRouter API, WhatsApp API",
+          image: "img/projects/scms abdul qudoos php developer.png",
+          category: "Research",
+          link: "#",
+        },
+        {
+          title: "Certificate Verification System",
+          desc: "Personal portfolio showcasing projects, research, and skills. Fully responsive with dynamic content loading.",
+          tech: "HTML, CSS, JavaScript, PHP",
+          image:
+            "img/projects/certificate-verification abdul qudoos php developer.png",
+          category: "Web",
+          link: "#",
+        },
+        {
+          title: "EchoMind AI - Voice Assistant",
+          desc: "Developed a real-world AI voice assistant capable of real-time speech recognition, context-aware responses, and natural voice output. Built with a complete voice-to-voice pipeline, deployed for live web interaction with secure API handling and customizable assistant behavior.",
+          tech: "Python, Gradio, Hugging Face, OpenRouter API, gTTS, Whisper ASR, Logging",
+          image: "img/projects/echomind-ai abdul qudoos ai developer.png",
+          category: "AI / Machine Learning",
+          link: "https://huggingface.co/spaces/abdulqudoosmastoi66/EchoMind-AI",
+        },
+        {
+          title: "AI Content Generator",
+          desc: "Built a lightweight AI-powered content generator that creates blog-style text from user input in real time. Integrated OpenRouter API with Laravel to deliver fast, human-like responses with a clean UI and smooth user experience.",
+          tech: "Laravel, PHP, OpenRouter API, Mistral 7B, Bootstrap 5",
+          image:
+            "img/projects/ai-content-generator abdul qudoos php developer.png",
+          category: "AI / Web App",
+          link: "#",
+        },
+        {
+          title: "School Management Website",
+          desc: "Developed a complete school website with an admin panel to manage all site content dynamically. Includes features for handling students, staff, announcements, and website updates through a centralized dashboard.",
+          tech: "PHP, MySQL, HTML, CSS, JavaScript",
+          image:
+            "img/projects/school-management abdul qudoos php developer.png",
+          category: "Full Stack",
+          link: "https://indusssn.com/",
+        },
+      ];
+
+      function renderProjects(filter = "all") {
+        const grid = document.getElementById("projectsGrid");
+        const filtered =
+          filter === "all"
+            ? projectsData
+            : projectsData.filter((p) => p.category === filter);
+        grid.innerHTML = filtered
+          .map(
+            (p) => `
+          <div class="project-card fade-in-up visible">
+            <div class="project-img"><img src="${p.image}" alt="${p.title}" loading="lazy"></div>
+            <div class="project-info">
+              <h3>${p.title}</h3>
+              <p>${p.desc}</p>
+              <div class="tech-stack">${p.tech
+                .split(",")
+                .map((t) => `<span>${t.trim()}</span>`)
+                .join("")}</div>
+              <a href="${p.link}" class="btn-link" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        `,
+          )
+          .join("");
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        renderProjects();
+        document.querySelectorAll(".filter-btn").forEach((btn) =>
+          btn.addEventListener("click", function () {
+            document
+              .querySelectorAll(".filter-btn")
+              .forEach((b) => b.classList.remove("active"));
+            this.classList.add("active");
+            renderProjects(this.dataset.filter);
+          }),
+        );
+      });
+    </script>
+  </body>
+</html>

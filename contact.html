@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Abdul Qudoos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .contact-info h3,
+      .contact-form h3 {
+        font-size: 1.8rem;
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+      }
+      .contact-info p {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      .contact-info p i {
+        color: var(--primary);
+        font-size: 1.2rem;
+        width: 24px;
+        text-align: center;
+      }
+      .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .social-links a {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-light);
+        font-size: 1.2rem;
+        transition: var(--transition);
+        text-decoration: none;
+      }
+      .social-links a:hover {
+        background: var(--primary);
+        border-color: var(--primary);
+        transform: translateY(-3px);
+      }
+      .contact-form {
+        background: var(--card-bg);
+        backdrop-filter: var(--glass-blur);
+        border: 1px solid var(--border);
+        padding: 2.5rem;
+        border-radius: 24px;
+      }
+      .form-note {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        margin-top: 1rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ambient-glow"></div>
+    <header id="main-header"></header>
+    <main class="page-container">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h1>Contact</h1>
+          <p>Let's connect for collaborations or opportunities</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info fade-in-up">
+            <h3>Get in touch</h3>
+            <p>
+              <i class="fas fa-envelope"></i> abdulqudoosdeveloper@gmail.com
+            </p>
+            <p><i class="fas fa-phone"></i> +92 3173502955</p>
+            <p>
+              <i class="fab fa-linkedin"></i>
+              linkedin.com/in/abdul-qudoos-896a3527b/
+            </p>
+            <p><i class="fab fa-github"></i> github.com/aqudoos66</p>
+            <p>
+              <i class="fas fa-globe"></i> abdulqudoosmastoi-portfolio.free.nf
+            </p>
+            <div class="social-links">
+              <a href="https://github.com/aqudoos66" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/abdul-qudoos-896a3527b/"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://abdulqudoosmastoi-portfolio.free.nf/"
+                target="_blank"
+                ><i class="fas fa-globe"></i
+              ></a>
+            </div>
+          </div>
+          <form class="contact-form fade-in-up" id="demoForm">
+            <h3>Send a message</h3>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Email" required />
+            <textarea
+              rows="5"
+              placeholder="Project details or inquiry..."
+            ></textarea>
+            <button type="submit" class="btn btn-primary" style="width: 100%">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+            <p class="form-note" style="margin-top: 15px; text-align: center">
+              <strong>Demo form (Soon Available)</strong> — reach me directly
+              via
+              <a href="mailto:abdulqudoosdeveloper@gmail.com">email</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer id="main-footer"></footer>
+    <script src="common.js"></script>
+    <script>
+      document.getElementById("demoForm")?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert(
+          "Thank you! Please email me directly at abdulqudoosdeveloper@gmail.com",
+        );
+      });
+    </script>
+  </body>
+</html>

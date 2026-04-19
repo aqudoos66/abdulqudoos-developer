@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Abdul Qudoos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+      .service-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        backdrop-filter: var(--glass-blur);
+        padding: 3rem 2rem;
+        border-radius: 24px;
+        text-align: center;
+        transition: var(--transition);
+      }
+      .service-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--border-hover);
+        background: rgba(30, 34, 48, 0.5);
+      }
+      .service-icon {
+        font-size: 3rem;
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+        text-shadow: 0 0 20px var(--primary-glow);
+      }
+      .service-card h3 {
+        font-size: 1.4rem;
+        color: var(--text-light);
+        margin-bottom: 1rem;
+      }
+      .service-card p {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+      }
+      .cta-section {
+        text-align: center;
+        margin: 5rem auto;
+        padding: 4rem 2rem;
+        background: linear-gradient(
+          180deg,
+          rgba(129, 140, 248, 0.05),
+          transparent
+        );
+        border: 1px solid var(--border);
+        border-radius: 32px;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 60%;
+        background: radial-gradient(
+          circle,
+          var(--primary-glow) 0%,
+          transparent 70%
+        );
+        filter: blur(50px);
+        pointer-events: none;
+      }
+      .cta-section p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ambient-glow secondary"></div>
+    <header id="main-header"></header>
+    <main class="page-container">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h1>Services</h1>
+          <p>What I can do for you</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card fade-in-up">
+            <i class="fas fa-code service-icon"></i>
+            <h3>Laravel Development</h3>
+            <p>
+              Custom web applications, MVC architecture, authentication systems,
+              and CRUD operations using Laravel PHP framework.
+            </p>
+          </div>
+          <div class="service-card fade-in-up">
+            <i class="fas fa-cloud-upload-alt service-icon"></i>
+            <h3>RESTful API Development</h3>
+            <p>
+              Secure, scalable APIs with JSON responses, JWT authentication, and
+              complete Postman documentation.
+            </p>
+          </div>
+          <div class="service-card fade-in-up">
+            <i class="fas fa-database service-icon"></i>
+            <h3>Database Design & Optimization</h3>
+            <p>
+              MySQL schema design, query optimization, indexing strategies, and
+              database administration.
+            </p>
+          </div>
+          <div class="service-card fade-in-up">
+            <i class="fas fa-laptop-code service-icon"></i>
+            <h3>Full Stack Integration</h3>
+            <p>
+              Connecting backend logic with frontend interfaces using
+              HTML/CSS/JS and modern frameworks.
+            </p>
+          </div>
+        </div>
+        <div class="cta-section fade-in-up">
+          <p>Need a reliable backend for your next project?</p>
+          <a href="contact.html" class="btn btn-primary"
+            >Hire Me <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </main>
+    <footer id="main-footer"></footer>
+    <script src="common.js"></script>
+  </body>
+</html>

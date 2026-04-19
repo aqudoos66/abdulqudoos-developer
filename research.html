@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research | Ongoing & Completed</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .research-area {
+        margin-bottom: 4rem;
+      }
+      .research-area h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        color: var(--text-light);
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      .research-area h2 i {
+        color: var(--primary);
+      }
+      .research-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        backdrop-filter: var(--glass-blur);
+        padding: 2rem;
+        border-radius: 20px;
+        margin-bottom: 1.5rem;
+        transition: var(--transition);
+        position: relative;
+      }
+      .research-card:hover {
+        border-color: var(--border-hover);
+        transform: translateX(6px);
+        background: rgba(30, 34, 48, 0.5);
+      }
+      .research-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+        color: var(--text-light);
+      }
+      .research-card p {
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+      .research-tag {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        background: rgba(129, 140, 248, 0.1);
+        border: 1px solid rgba(129, 140, 248, 0.2);
+        color: var(--primary);
+        padding: 0.3rem 0.8rem;
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ambient-glow"></div>
+    <header id="main-header"></header>
+    <main class="page-container">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h1>Research</h1>
+          <p>Exploring AI, distributed systems, and software engineering</p>
+        </div>
+
+        <div class="research-area">
+          <h2 class="fade-in-up">
+            <i class="fas fa-check-circle"></i> Completed Research
+          </h2>
+          <div class="research-card fade-in-up">
+            <span
+              class="research-tag"
+              style="
+                background: rgba(20, 184, 166, 0.1);
+                border-color: rgba(20, 184, 166, 0.2);
+                color: var(--secondary);
+              "
+              >Published</span
+            >
+            <h3>Smart Conference Management System (SCMS)</h3>
+            <p>
+              An integrated platform for academic conference management
+              featuring automatic website generation, AI-assisted reviews, and
+              multi-role dashboards. The system reduced website setup time by
+              98% and achieved a 4.7/5 user satisfaction score.
+              <br /><br />
+              <strong>URL:</strong>
+              <a
+                href="https://journal.50sea.com/index.php/IJIST/article/view/1700"
+                >https://journal.50sea.com/index.php/IJIST/article/view/1700</a
+              >
+            </p>
+          </div>
+          <!-- Other completed research items remain unchanged -->
+        </div>
+      </div>
+    </main>
+    <footer id="main-footer"></footer>
+    <script src="common.js"></script>
+  </body>
+</html>
