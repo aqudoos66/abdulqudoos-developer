@@ -10,6 +10,87 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
+      /* Additional styles for toggle buttons and certificates */
+      .toggle-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+      .toggle-btn {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border);
+        padding: 0.6rem 1.5rem;
+        border-radius: 40px;
+        color: var(--text-muted);
+        cursor: pointer;
+        font-weight: 600;
+        transition: var(--transition);
+      }
+      .toggle-btn.active {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+      }
+      .toggle-btn:hover:not(.active) {
+        background: rgba(129, 140, 248, 0.2);
+        border-color: var(--primary);
+        color: var(--text-light);
+      }
+      .content-panel {
+        display: none;
+      }
+      .content-panel.active-panel {
+        display: block;
+      }
+      .timeline {
+        border-left: 2px solid var(--border-hover);
+        margin-left: 1rem;
+        padding-left: 1.5rem;
+      }
+      .timeline-item {
+        margin-bottom: 2rem;
+        position: relative;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -1.8rem;
+        top: 0.25rem;
+        width: 12px;
+        height: 12px;
+        background: var(--primary);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--primary-glow);
+      }
+      .timeline-date {
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .timeline-content h4 {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        margin-bottom: 0.5rem;
+      }
+      .timeline-content p {
+        color: var(--text-muted);
+        margin-bottom: 0.25rem;
+      }
+      .cert-badge {
+        display: inline-block;
+        background: rgba(20, 184, 166, 0.15);
+        border: 1px solid var(--secondary);
+        color: var(--secondary);
+        padding: 0.2rem 0.7rem;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        margin-top: 0.5rem;
+      }
       .about-text h2 {
         font-size: 2rem;
         color: var(--text-light);
@@ -46,47 +127,6 @@
         transform: translateY(-2px);
         background: rgba(129, 140, 248, 0.1);
       }
-      .timeline-section h3 {
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-        color: var(--text-light);
-      }
-      .timeline {
-        border-left: 2px solid var(--border-hover);
-        margin-left: 1rem;
-        padding-left: 1.5rem;
-      }
-      .timeline-item {
-        margin-bottom: 2.5rem;
-        position: relative;
-      }
-      .timeline-item::before {
-        content: "";
-        position: absolute;
-        left: -1.8rem;
-        top: 0.25rem;
-        width: 12px;
-        height: 12px;
-        background: var(--primary);
-        border-radius: 50%;
-        box-shadow: 0 0 10px var(--primary-glow);
-      }
-      .timeline-date {
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 0.5rem;
-        font-size: 0.9rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-      }
-      .timeline-content h4 {
-        font-size: 1.2rem;
-        color: var(--text-light);
-        margin-bottom: 0.5rem;
-      }
-      .timeline-content p {
-        color: var(--text-muted);
-      }
       .social-links-about {
         display: flex;
         gap: 1rem;
@@ -111,8 +151,6 @@
         border-color: var(--primary);
         transform: translateY(-3px);
       }
-
-      /* New gallery button style */
       .gallery-btn-container {
         margin-top: 2rem;
         text-align: left;
@@ -148,6 +186,7 @@
           <p>Computer Science student & Backend Developer</p>
         </div>
         <div class="about-grid">
+          <!-- Left Column: Summary, Skills, Social -->
           <div class="about-text fade-in-up">
             <h2>Professional Summary</h2>
             <p>
@@ -169,17 +208,16 @@
             <div class="skills-section">
               <h3>Technical Skills</h3>
               <div class="skill-tags">
-                <span>Laravel</span><span>PHP (OOP)</span><span>MySQL</span
-                ><span>REST API</span> <span>Git & GitHub</span
-                ><span>HTML/CSS</span><span>JavaScript</span
-                ><span>MVC Architecture</span>
+                <span>Laravel</span><span>PHP (OOP)</span><span>MySQL</span>
+                <span>REST API</span><span>Git & GitHub</span>
+                <span>HTML/CSS</span><span>JavaScript</span>
+                <span>MVC Architecture</span>
               </div>
 
               <h3>Tools & Platforms</h3>
               <div class="skill-tags">
-                <span>Postman</span><span>phpMyAdmin</span><span>VS Code</span
-                ><span>GitHub</span> <span>Windows/Linux</span
-                ><span>Apache</span>
+                <span>Postman</span><span>phpMyAdmin</span><span>VS Code</span>
+                <span>GitHub</span><span>Windows/Linux</span><span>Apache</span>
               </div>
             </div>
 
@@ -199,7 +237,6 @@
               ></a>
             </div>
 
-            <!-- Gallery Button Added Here -->
             <div class="gallery-btn-container">
               <a href="gallery.html" class="btn-gallery">
                 <i class="fas fa-images"></i> Visit My Gallery
@@ -208,44 +245,122 @@
             </div>
           </div>
 
+          <!-- Right Column: Toggle Buttons + Dynamic Content -->
           <div class="timeline-section fade-in-up">
-            <h3>Experience & Education</h3>
-            <div class="timeline">
-              <div class="timeline-item">
-                <div class="timeline-date">2025 – Present</div>
-                <div class="timeline-content">
-                  <h4>Backend Developer (Laravel)</h4>
-                  <p>
-                    Sindh Tech Solutions — Developing backend modules, RESTful
-                    APIs, and MySQL databases. Using Git for collaboration.
-                  </p>
+            <h3>Professional Journey</h3>
+            <div class="toggle-buttons">
+              <button class="toggle-btn active" data-target="experience">
+                💼 Experience
+              </button>
+              <button class="toggle-btn" data-target="education">
+                🎓 Education
+              </button>
+              <button class="toggle-btn" data-target="certifications">
+                📜 Certifications
+              </button>
+            </div>
+
+            <!-- Experience Panel -->
+            <div id="experience" class="content-panel active-panel">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-date">2025 – Present</div>
+                  <div class="timeline-content">
+                    <h4>Backend Developer (Laravel)</h4>
+                    <p>
+                      Sindh Tech Solutions — Developing backend modules, RESTful
+                      APIs, and MySQL databases. Using Git for collaboration.
+                    </p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">Jul 2024 – Sep 2024</div>
+                  <div class="timeline-content">
+                    <h4>IT Intern</h4>
+                    <p>
+                      FFBL, Karachi — Hands-on experience in IT operations and
+                      systems.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="timeline-item">
-                <div class="timeline-date">Jul 2024 – Sep 2024</div>
-                <div class="timeline-content">
-                  <h4>IT Intern</h4>
-                  <p>
-                    FFBL, Karachi — Gained hands-on experience in information
-                    technology operations and systems.
-                  </p>
+            </div>
+
+            <!-- Education Panel -->
+            <div id="education" class="content-panel">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-date">2022 – Present</div>
+                  <div class="timeline-content">
+                    <h4>B.E. Computer Science</h4>
+                    <p>QUEST Nawabshah — CGPA: Ongoing | EQF Level 6</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">2024</div>
+                  <div class="timeline-content">
+                    <h4>Technical Domain (NFTP)</h4>
+                    <p>
+                      QUEST Nawabshah — Web development & database
+                      administration.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="timeline-item">
-                <div class="timeline-date">2022 – Present</div>
-                <div class="timeline-content">
-                  <h4>B.E. Computer Science</h4>
-                  <p>QUEST Nawabshah — CGPA: Ongoing | EQF Level 6</p>
+            </div>
+
+            <!-- Certifications Panel -->
+            <div id="certifications" class="content-panel">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-date">2025</div>
+                  <div class="timeline-content">
+                    <h4>Generative AI Application Developer</h4>
+                    <p>HEC — 6 weeks training program</p>
+                    <span class="cert-badge"
+                      ><i class="fas fa-certificate"></i> Verified</span
+                    >
+                  </div>
                 </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-date">2024</div>
-                <div class="timeline-content">
-                  <h4>Technical Domain (NFTP)</h4>
-                  <p>
-                    QUEST Nawabshah — Web development & database administration
-                    certification.
-                  </p>
+                <div class="timeline-item">
+                  <div class="timeline-date">2025</div>
+                  <div class="timeline-content">
+                    <h4>HTML, CSS, JavaScript for Web Developers</h4>
+                    <p>Johns Hopkins University (Coursera)</p>
+                    <span class="cert-badge"
+                      ><i class="fas fa-certificate"></i> Verified</span
+                    >
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">2024</div>
+                  <div class="timeline-content">
+                    <h4>Database Administration (PITP)</h4>
+                    <p>QUEST Nawabshah</p>
+                    <span class="cert-badge"
+                      ><i class="fas fa-database"></i> Professional</span
+                    >
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">2024</div>
+                  <div class="timeline-content">
+                    <h4>Prompt Engineering for ChatGPT</h4>
+                    <p>Great Learning (Online)</p>
+                    <span class="cert-badge"
+                      ><i class="fas fa-magic"></i> Certified</span
+                    >
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">2024</div>
+                  <div class="timeline-content">
+                    <h4>Technical Domain (NFTP)</h4>
+                    <p>QUEST Nawabshah — Web & Database Certification</p>
+                    <span class="cert-badge"
+                      ><i class="fas fa-code"></i> Completed</span
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -255,5 +370,29 @@
     </main>
     <footer id="main-footer"></footer>
     <script src="common.js"></script>
+    <script>
+      // Toggle functionality for Experience / Education / Certifications
+      const btns = document.querySelectorAll(".toggle-btn");
+      const panels = {
+        experience: document.getElementById("experience"),
+        education: document.getElementById("education"),
+        certifications: document.getElementById("certifications"),
+      };
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = btn.getAttribute("data-target");
+          // Deactivate all buttons
+          btns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          // Hide all panels
+          Object.values(panels).forEach((panel) => {
+            if (panel) panel.classList.remove("active-panel");
+          });
+          // Show selected panel
+          if (panels[target]) panels[target].classList.add("active-panel");
+        });
+      });
+    </script>
   </body>
 </html>
