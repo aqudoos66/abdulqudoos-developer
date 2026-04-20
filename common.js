@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // ========== HEADER ==========
   const headerPlace = document.getElementById("main-header");
   if (headerPlace) {
     headerPlace.innerHTML = `
       <nav class="navbar">
         <div class="container nav-container">
-          <div class="logo"><a href="../index.html">DevArchitect</a></div>
+          <div class="logo"><a href="index.html">DevArchitect</a></div>
           <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
           <div class="nav-actions">
             <ul class="nav-links" id="nav-links">
@@ -22,13 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
       </nav>
     `;
 
+    // Mobile menu toggle
     const toggle = document.getElementById("mobile-menu");
     const navLinks = document.getElementById("nav-links");
-    if (toggle) {
+    if (toggle && navLinks) {
+      // Toggle menu on button click
       toggle.addEventListener("click", (e) => {
         e.stopPropagation();
         navLinks.classList.toggle("show");
       });
+
+      // Close menu when clicking outside
       document.addEventListener("click", (event) => {
         if (
           !toggle.contains(event.target) &&
@@ -37,12 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
           navLinks.classList.remove("show");
         }
       });
+
+      // Close menu when a link is clicked (for better mobile UX)
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("show");
+        });
+      });
     }
 
+    // Active link highlighting
     const currentPath = window.location.pathname;
     document.querySelectorAll(".nav-links a").forEach((link) => {
       const href = link.getAttribute("href");
-      // Normalize index pathing
       const isIndex =
         currentPath.endsWith("index.html") ||
         currentPath.endsWith("/") ||
@@ -54,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Make floating navbar slighty translucent when not scrolling, opaque when scrolling
+    // Navbar scroll effect
     const navbar = document.querySelector(".navbar");
     window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
@@ -81,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       };
 
-      // Load saved theme or check system preference
       const savedTheme = localStorage.getItem("theme");
       if (savedTheme) {
         applyTheme(savedTheme);
@@ -100,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // ========== FOOTER ==========
   const footerPlace = document.getElementById("main-footer");
   if (footerPlace) {
     footerPlace.innerHTML = `
@@ -120,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Smooth anchor scrolling
+  // ========== SMOOTH SCROLL FOR ANCHOR LINKS ==========
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const targetId = this.getAttribute("href");
@@ -134,18 +146,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Advanced Intersection Observer for staggered fade-in animations
+  // ========== INTERSECTION OBSERVER FOR FADE-IN ANIMATIONS ==========
   const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.15,
+    threshold: 0.1,
   };
 
-  const observer = new IntersectionObserver((entries, observer) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        // Add staggered delay based on index relative to viewport items if needed,
-        // simplified here by delaying based on execution time
         setTimeout(() => {
           entry.target.classList.add("visible");
         }, index * 100);
