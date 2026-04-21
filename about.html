@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Abdul Qudoos</title>
+    <title>About | Abdul Qudoos – Laravel & Generative AI Developer</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -94,7 +94,15 @@
       .about-text h2 {
         font-size: 2rem;
         color: var(--text-light);
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      .about-headline {
+        font-size: 1.2rem;
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        border-left: 3px solid var(--primary);
+        padding-left: 1rem;
       }
       .about-text p {
         color: var(--text-muted);
@@ -174,6 +182,11 @@
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba(129, 140, 248, 0.3);
       }
+      @media (max-width: 768px) {
+        .about-headline {
+          font-size: 1rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -188,29 +201,43 @@
         <div class="about-grid">
           <!-- Left Column: Summary, Skills, Social -->
           <div class="about-text fade-in-up">
-            <h2>Professional Summary</h2>
+            <h2>Abdul Qudoos</h2>
+            <div class="about-headline">
+              <i class="fas fa-quote-left" style="margin-right: 0.5rem"></i>
+              I Build Scalable SaaS & AI Web Applications for Startups | Laravel
+              & Generative AI Developer | Turning Ideas into Revenue-Ready
+              Products
+            </div>
             <p>
-              I'm <strong>Abdul Qudoos</strong>, a Computer Science student at
-              Quaid-e-Awam University of Engineering, Science & Technology,
-              Nawabshah. I specialize in backend development using
-              <strong>Laravel, PHP, and MySQL</strong>. I build RESTful APIs,
-              database-driven systems, and full-stack web applications.
+              I'm a Computer Science student at
+              <strong
+                >Quaid-e-Awam University of Engineering, Science & Technology,
+                Nawabshah</strong
+              >, specializing in backend development using
+              <strong>Laravel, PHP, Python, C#, and MySQL</strong>. I build
+              RESTful APIs, database-driven systems, and full-stack web
+              applications. I help startups and coaches turn their ideas into
+              scalable, secure, and revenue-ready web platforms.
             </p>
             <p>
               My published research on
-              <strong>Smart Conference Management System (SCMS)</strong>
-              demonstrates my ability to design integrated platforms with
-              role-based dashboards and automated workflows. I'm passionate
-              about clean code, database optimization, and solving real-world
-              problems through technology.
+              <strong>Smart Conference Management System (SCMS)</strong> (IJIST,
+              2025) demonstrates my ability to design integrated platforms with
+              role-based dashboards and automated workflows. I have presented
+              this work at the 1st International Conference on Computing
+              Sciences and Emerging Trends (CSET'26). I'm passionate about clean
+              code, database optimization, and solving real-world problems
+              through technology — including AI-powered features like chatbots
+              and voice assistants.
             </p>
 
             <div class="skills-section">
               <h3>Technical Skills</h3>
               <div class="skill-tags">
-                <span>Laravel</span><span>PHP (OOP)</span><span>MySQL</span>
+                <span>Laravel</span><span>PHP (OOP)</span><span>Python</span>
+                <span>C# / ASP.NET</span><span>MySQL / SQL</span>
                 <span>REST API</span><span>Git & GitHub</span>
-                <span>HTML/CSS</span><span>JavaScript</span>
+                <span>HTML/CSS/JS</span><span>Generative AI</span>
                 <span>MVC Architecture</span>
               </div>
 
@@ -218,6 +245,7 @@
               <div class="skill-tags">
                 <span>Postman</span><span>phpMyAdmin</span><span>VS Code</span>
                 <span>GitHub</span><span>Windows/Linux</span><span>Apache</span>
+                <span>Hugging Face</span><span>OpenRouter API</span>
               </div>
             </div>
 
@@ -260,40 +288,71 @@
               </button>
             </div>
 
-            <!-- Experience Panel -->
+            <!-- Experience Panel (updated with LinkedIn roles) -->
             <div id="experience" class="content-panel active-panel">
               <div class="timeline">
                 <div class="timeline-item">
-                  <div class="timeline-date">2025 – Present</div>
+                  <div class="timeline-date">Jul 2025 – Aug 2025</div>
                   <div class="timeline-content">
-                    <h4>Backend Developer (Laravel)</h4>
+                    <h4>Artificial Intelligence Intern</h4>
+                    <p>Arch Technologies · Remote</p>
                     <p>
-                      Sindh Tech Solutions — Developing backend modules, RESTful
-                      APIs, and MySQL databases. Using Git for collaboration.
+                      Collaborated on Kaggle datasets, developed ML models,
+                      improved task efficiency with structured deadlines.
                     </p>
                   </div>
                 </div>
                 <div class="timeline-item">
-                  <div class="timeline-date">Jul 2024 – Sep 2024</div>
+                  <div class="timeline-date">Jan 2025 – Jun 2025</div>
+                  <div class="timeline-content">
+                    <h4>Backend Developer (Laravel)</h4>
+                    <p>Sindh Tech Solutions · On-site (Nawabshah)</p>
+                    <p>
+                      Built inventory systems, certificate verification, LMS
+                      modules, and RESTful APIs. Enhanced database performance
+                      and version control with Git.
+                    </p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">Jul 2024 – Aug 2024</div>
                   <div class="timeline-content">
                     <h4>IT Intern</h4>
+                    <p>FFBL, Karachi · On-site</p>
                     <p>
-                      FFBL, Karachi — Hands-on experience in IT operations and
-                      systems.
+                      Hands-on experience in IT operations, infrastructure, and
+                      technical support.
+                    </p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">Jun 2024 – Jul 2024</div>
+                  <div class="timeline-content">
+                    <h4>Frontend Web Developer</h4>
+                    <p>Code Alpha · Remote</p>
+                    <p>
+                      Developed responsive interfaces using JavaScript, HTML,
+                      and CSS. Collaborated on UI/UX improvements.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Education Panel -->
+            <!-- Education Panel (same but enhanced) -->
             <div id="education" class="content-panel">
               <div class="timeline">
                 <div class="timeline-item">
-                  <div class="timeline-date">2022 – Present</div>
+                  <div class="timeline-date">
+                    2022 – Present (Expected 2026)
+                  </div>
                   <div class="timeline-content">
                     <h4>B.E. Computer Science</h4>
-                    <p>QUEST Nawabshah — CGPA: Ongoing | EQF Level 6</p>
+                    <p>
+                      Quaid-e-Awam University of Engineering, Sciences &
+                      Technology, Nawabshah
+                    </p>
+                    <p>CGPA: Ongoing | EQF Level 6</p>
                   </div>
                 </div>
                 <div class="timeline-item">
@@ -309,16 +368,26 @@
               </div>
             </div>
 
-            <!-- Certifications Panel -->
+            <!-- Certifications Panel (expanded with LinkedIn credentials) -->
             <div id="certifications" class="content-panel">
               <div class="timeline">
                 <div class="timeline-item">
                   <div class="timeline-date">2025</div>
                   <div class="timeline-content">
                     <h4>Generative AI Application Developer</h4>
-                    <p>HEC — 6 weeks training program</p>
+                    <p>HEC / NCEAC — 6 weeks training program</p>
                     <span class="cert-badge"
                       ><i class="fas fa-certificate"></i> Verified</span
+                    >
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">2025</div>
+                  <div class="timeline-content">
+                    <h4>Certified Database Administrator</h4>
+                    <p>Sukkur IBA University</p>
+                    <span class="cert-badge"
+                      ><i class="fas fa-database"></i> Professional</span
                     >
                   </div>
                 </div>
@@ -382,14 +451,11 @@
       btns.forEach((btn) => {
         btn.addEventListener("click", () => {
           const target = btn.getAttribute("data-target");
-          // Deactivate all buttons
           btns.forEach((b) => b.classList.remove("active"));
           btn.classList.add("active");
-          // Hide all panels
           Object.values(panels).forEach((panel) => {
             if (panel) panel.classList.remove("active-panel");
           });
-          // Show selected panel
           if (panels[target]) panels[target].classList.add("active-panel");
         });
       });

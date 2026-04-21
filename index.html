@@ -6,83 +6,57 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    <title>Abdul Qudoos | Web Developer & AI Engineer</title>
-    <meta
-      name="description"
-      content="Abdul Qudoos - Web Developer specializing in Laravel, PHP, AI projects, and full-stack development. View portfolio, projects, and research work."
-    />
-    <meta
-      name="keywords"
-      content="Abdul Qudoos, Laravel Developer, PHP Developer, AI Developer, Portfolio Pakistan"
-    />
-    <meta name="author" content="Abdul Qudoos" />
-
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Abdul Qudoos | Backend Developer & Computer Science Student</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-
-    <!-- Main global styles (fully responsive) -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Minimal page-specific styles (no grid/flex overrides, only cursor + profile enhancements) -->
     <style>
-      /* Additional index-only styling without breaking responsive grids */
-      .profile-img {
-        width: 140px;
-        height: 140px;
+      /* additional micro-interactions & hero enhancements */
+      .hero-avatar {
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        overflow: hidden;
+      }
+      .hero-avatar img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        border: 3px solid var(--surface-hover);
-        box-shadow: 0 0 40px rgba(129, 140, 248, 0.4);
-        margin-bottom: 1.2rem;
-        transition: transform 0.3s ease;
+        object-position: center;
       }
-      .profile-img:hover {
-        transform: scale(1.02);
+      .hero-avatar i {
+        font-size: 3.5rem;
+        color: white;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       }
-      .cursor {
-        display: inline-block;
-        width: 4px;
-        background: var(--primary);
-        margin-left: 6px;
-        animation: blink 0.8s infinite;
-        border-radius: 4px;
-        vertical-align: middle;
+      .research-highlight-card .research-icon i {
+        font-size: 2rem;
       }
-      @keyframes blink {
-        0%,
-        100% {
-          opacity: 1;
+      .featured-item {
+        transition: var(--transition);
+      }
+      .btn-group {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      @media (max-width: 640px) {
+        .hero-avatar {
+          width: 90px;
+          height: 90px;
         }
-        50% {
-          opacity: 0;
-        }
-      }
-      /* ensure stats-section spacing is consistent */
-      .stats-section {
-        margin-top: 1rem;
-        padding: 1rem 0 2rem;
-      }
-      /* featured research card - fully relies on style.css media queries */
-      .research-highlight-card {
-        transition:
-          transform 0.3s ease,
-          border-color 0.3s;
-      }
-      .research-highlight-card:hover {
-        transform: translateY(-6px);
-      }
-      @media (max-width: 480px) {
-        .profile-img {
-          width: 100px;
-          height: 100px;
-        }
-        .glow-text {
-          font-size: 1.9rem;
+        .hero-avatar i {
+          font-size: 2.5rem;
         }
       }
     </style>
@@ -96,194 +70,212 @@
     <main>
       <!-- Hero Section -->
       <section class="hero">
-        <div class="container hero-wrapper">
-          <div class="hero-content">
-            <div class="fade-in-up">
-              <div class="pill-badge">
-                <span class="pulse"></span> Open to freelance & remote
-                opportunities
-              </div>
+        <div class="container">
+          <div class="hero-content fade-in-up">
+            <div class="hero-avatar">
+              <img
+                src="img/abdul%20qudoos%20php%20developer.jpeg"
+                alt="Abdul Qudoos - Backend Developer"
+                onerror="
+                  this.onerror = null;
+                  this.parentElement.innerHTML =
+                    '<i class=\'fas fa-code\'></i>';
+                "
+              />
             </div>
-            <img
-              class="profile-img fade-in-up"
-              src="img/abdul qudoos php developer.jpeg"
-              alt="Abdul Qudoos - Laravel & PHP Developer"
-              width="140"
-              height="140"
-              fetchpriority="high"
-            />
-            <h1 class="glow-text fade-in-up">
-              <span id="typed-headline"></span><span class="cursor">|</span>
+            <div class="pill-badge">
+              <span class="pulse"></span>
+              Open for work · Remote job · Freelance opportunities
+            </div>
+            <h1 class="glow-text">
+              Abdul Qudoos<br />
+              <!-- <span style="color: var(--primary)">Backend Developer</span> -->
             </h1>
-            <p class="hero-subtitle fade-in-up">
-              I'm Abdul Qudoos — Backend Developer specializing in Laravel, PHP,
-              and MySQL. Building scalable APIs and database-driven web
-              applications.
+            <p class="hero-subtitle">
+              Computer Science student at QUEST Nawabshah · Laravel · PHP ·
+              MySQL · REST APIs · AI integration · Research-driven development
             </p>
-            <div class="hero-buttons fade-in-up">
-              <a href="#featured" class="btn btn-primary"
-                >View Projects <i class="fas fa-arrow-right"></i
-              ></a>
-              <a href="contact.html" class="btn btn-outline">Contact Me</a>
+            <div class="hero-buttons">
+              <a href="projects.html" class="btn btn-primary"
+                >✨ Explore Projects</a
+              >
+              <a href="contact.html" class="btn btn-outline">📬 Contact Me</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Stats Counter Section (fully responsive) -->
-      <section class="stats-section fade-in-up">
+      <!-- Stats Section (dynamic credibility) -->
+      <div class="stats-section" style="margin-top: 1.5rem">
         <div class="container">
           <div class="stats-grid">
-            <div class="stat-card">
-              <span class="stat-number" data-target="7">0</span>
-              <span class="stat-label">Projects</span>
+            <div class="stat-card fade-in-up">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Production Projects</span>
             </div>
-            <div class="stat-card">
-              <span class="stat-number" data-target="1">0</span>
-              <span class="stat-label">Publications</span>
+            <div class="stat-card fade-in-up">
+              <span class="stat-number">1</span>
+              <span class="stat-label">Peer-Reviewed Publication</span>
             </div>
-            <div class="stat-card">
-              <span class="stat-number" data-target="6">0</span>
+            <div class="stat-card fade-in-up">
+              <span class="stat-number">4+</span>
               <span class="stat-label">Certifications</span>
             </div>
-            <div class="stat-card">
-              <span class="stat-number" data-target="2">0</span>
-              <span class="stat-label">+ Years Experience</span>
+            <div class="stat-card fade-in-up">
+              <span class="stat-number">2+</span>
+              <span class="stat-label">Years of Dev Experience</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- Featured Projects Section -->
-      <section id="featured" class="featured-work">
-        <div class="container">
-          <div class="section-header fade-in-up text-center">
-            <h2>Featured Projects</h2>
-            <p>Real-world applications I've built</p>
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2>Featured Projects</h2>
+          <p>
+            Real-world applications — from full-stack systems to AI-powered
+            tools
+          </p>
+        </div>
+        <div class="featured-grid projects-grid" id="featuredProjects">
+          <!-- dynamic cards will be shown via JS -->
+        </div>
+        <div class="text-center fade-in-up" style="margin: 1rem 0 2rem">
+          <a href="projects.html" class="btn btn-outline"
+            >View All Projects <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+
+      <!-- Research Highlight (SCMS) -->
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2>Featured Research</h2>
+          <p>Published work that solves real academic challenges</p>
+        </div>
+        <div class="research-highlight-card fade-in-up">
+          <div class="research-icon">
+            <i class="fas fa-microphone-alt"></i>
           </div>
-          <div class="featured-grid" id="featuredGrid"></div>
-          <div class="text-center fade-in-up" style="margin-top: 3rem">
-            <a href="projects.html" class="btn btn-outline"
-              >View All Projects <i class="fas fa-arrow-right"></i
+          <div class="research-content">
+            <h3>Smart Conference Management System (SCMS)</h3>
+            <p>
+              An integrated platform automating conference website generation,
+              AI-assisted peer review, multi-role dashboards, and real-time
+              notifications. Published in <strong>IJIST</strong>
+              (Vol. 7, Issue 10, 2025). Achieved 98% reduction in website setup
+              time and 4.7/5 user satisfaction.
+            </p>
+            <a href="publications.html" class="link-arrow"
+              >Read publication <i class="fas fa-arrow-right"></i
             ></a>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- Latest Research Section -->
-      <section class="featured-research">
-        <div class="container">
-          <div class="section-header fade-in-up text-center">
-            <h2>Latest Research</h2>
-            <p>Published paper in International Journal IJIST</p>
+      <!-- Services Snapshot -->
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2>What I Do</h2>
+          <p>
+            Backend engineering, API design & intelligent system development
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card fade-in-up">
+            <i class="fas fa-tachometer-alt service-icon"></i>
+            <h3>Laravel Development</h3>
+            <p>
+              Custom MVC apps, authentication, ORM, queues, and high-performance
+              backends.
+            </p>
           </div>
-          <div class="research-highlight-card fade-in-up">
-            <i class="fas fa-microchip research-icon"></i>
-            <div class="research-content">
-              <h3>Smart Conference Management System (SCMS)</h3>
-              <p>
-                An integrated platform for academic conference management
-                featuring automatic website generation, AI-assisted reviews,
-                role-based dashboards, and automated notifications. The system
-                reduced website setup time by 98% and achieved a 4.7/5 user
-                satisfaction score.
-              </p>
-              <a
-                href="https://journal.50sea.com/index.php/IJIST/article/view/1700"
-                class="link-arrow"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read Full Paper <i class="fas fa-long-arrow-alt-right"></i>
-              </a>
-            </div>
+          <div class="service-card fade-in-up">
+            <i class="fas fa-cloud-upload-alt service-icon"></i>
+            <h3>RESTful API Design</h3>
+            <p>
+              Secure, documented APIs with JWT, versioning, and third-party
+              integrations.
+            </p>
+          </div>
+          <div class="service-card fade-in-up">
+            <i class="fas fa-brain service-icon"></i>
+            <h3>AI Integration</h3>
+            <p>
+              LLM APIs, prompt engineering, and AI-powered features (OpenRouter,
+              Mistral).
+            </p>
           </div>
         </div>
-      </section>
+        <div class="text-center fade-in-up" style="margin-bottom: 2rem">
+          <a href="services.html" class="btn btn-primary"
+            >View all services <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+
+      <!-- Call to Action / Hire Me -->
+      <div class="container">
+        <div class="cta-section fade-in-up">
+          <p>Need a reliable backend architect or research collaborator?</p>
+          <div class="btn-group">
+            <a href="contact.html" class="btn btn-primary"
+              >Let's work together <i class="fas fa-paper-plane"></i
+            ></a>
+            <a href="about.html" class="btn btn-outline"
+              >More about me <i class="fas fa-user"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer id="main-footer"></footer>
 
-    <!-- Shared scripts (common.js handles header/footer, theme, animations) -->
     <script src="common.js"></script>
-
-    <!-- Index specific: typing animation, stats counter, featured projects loader -->
     <script>
       (function () {
-        // ========== TYPING ANIMATION (roles) ==========
-        const roles = [
-          "Laravel Developer",
-          "Backend Developer",
-          "PHP Developer",
-          "MySQL Specialist",
-          "API Architect",
-          "Full Stack Developer",
-        ];
-        let roleIndex = 0,
-          charIndex = 0,
-          isDeleting = false;
-        const typedEl = document.getElementById("typed-headline");
-
-        function typeEffect() {
-          if (!typedEl) return;
-          const current = roles[roleIndex];
-          if (isDeleting) {
-            typedEl.textContent = current.substring(0, charIndex - 1);
-            charIndex--;
-          } else {
-            typedEl.textContent = current.substring(0, charIndex + 1);
-            charIndex++;
-          }
-
-          if (!isDeleting && charIndex === current.length) {
-            isDeleting = true;
-            setTimeout(typeEffect, 2000);
-            return;
-          }
-          if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            setTimeout(typeEffect, 400);
-            return;
-          }
-          setTimeout(typeEffect, isDeleting ? 40 : 100);
-        }
-
-        // ========== FEATURED PROJECTS (only top 2-3) ==========
-        const featuredProjects = [
-          {
-            title: "Inventory Management System",
-            desc: "Web-based inventory system with product, stock, and user management modules. RESTful APIs and database optimization.",
-            tech: "Laravel, MySQL, PHP, REST API",
-            image:
-              "img/projects/inventory-solutions abdul qudoos php developer.png",
-            link: "#",
-          },
+        // Featured projects data (first 3 most representative from projectsData)
+        const featuredProjectsList = [
           {
             title: "Smart Conference Management System (SCMS)",
-            desc: "All-in-one platform for academic conferences with automatic website generation and AI-assisted reviews. Published in IJIST.",
-            tech: "Laravel, MySQL, OpenRouter API",
-            image: "img/projects/scms abdul qudoos php developer.png",
+            desc: "Full-stack platform with AI-assisted review, automatic website generation, and real-time WhatsApp notifications. Role dashboards for authors, reviewers, admins.",
+            tech: "Laravel, MySQL, OpenRouter API, WhatsApp API",
+            image:
+              "img/projects/smart%20conference%20management%20system%20abdul%20qudoos%20php%20developer.png",
+            category: "Research",
             link: "https://journal.50sea.com/index.php/IJIST/article/view/1700",
           },
           {
+            title: "Inventory Management System",
+            desc: "Web-based solution for stock control, user roles, and RESTful APIs. Optimized MySQL queries and authentication gates.",
+            tech: "Laravel, MySQL, PHP, REST API",
+            image:
+              "img/projects/inventory-solutions%20abdul%20qudoos%20php%20developer.png",
+            category: "Full Stack",
+            link: "#",
+          },
+          {
             title: "EchoMind AI - Voice Assistant",
-            desc: "Real-time AI voice assistant with speech recognition, context-aware responses, and natural voice output. Deployed on Hugging Face.",
-            tech: "Python, Gradio, OpenRouter API, Whisper ASR",
-            image: "img/projects/echomind-ai abdul qudoos ai developer.png",
+            desc: "Real-time speech recognition AI assistant with voice output, context-aware responses, deployed on Hugging Face Spaces.",
+            tech: "Python, Gradio, OpenRouter, Whisper ASR",
+            image:
+              "img/projects/echomind-ai%20abdul%20qudoos%20ai%20developer.png",
+            category: "AI / Machine Learning",
             link: "https://huggingface.co/spaces/abdulqudoosmastoi66/EchoMind-AI",
           },
         ];
 
-        function loadFeatured() {
-          const container = document.getElementById("featuredGrid");
-          if (!container) return;
-          container.innerHTML = featuredProjects
+        function renderFeaturedProjects() {
+          const grid = document.getElementById("featuredProjects");
+          if (!grid) return;
+          grid.innerHTML = featuredProjectsList
             .map(
               (project) => `
-          <div class="project-card fade-in-up visible">
+          <div class="project-card fade-in-up">
             <div class="project-img">
-              <img src="${project.image}" alt="${project.title}" loading="lazy">
+              <img src="${project.image}" alt="${project.title}" loading="lazy" onerror="this.src='https://picsum.photos/id/104/400/260'">
             </div>
             <div class="project-info">
               <h3>${project.title}</h3>
@@ -294,9 +286,7 @@
                   .map((t) => `<span>${t.trim()}</span>`)
                   .join("")}
               </div>
-              <a href="${project.link}" class="btn-link" target="_blank" rel="noopener noreferrer">
-                View Project <i class="fas fa-external-link-alt"></i>
-              </a>
+              <a href="${project.link}" class="btn-link" target="_blank" rel="noopener noreferrer">Explore <i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
         `,
@@ -304,79 +294,51 @@
             .join("");
         }
 
-        // ========== STATS COUNTER WITH INTERSECTION OBSERVER ==========
-        function initStatsCounter() {
-          const statNumbers = document.querySelectorAll(".stat-number");
-          if (!statNumbers.length) return;
-
+        // ensure that after header loaded, we render featured projects and any dynamic adjustments
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", () => {
+            renderFeaturedProjects();
+            // re-trigger fade-in observer for newly added cards (common.js already observes but new elements need observation)
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                  }
+                });
+              },
+              { threshold: 0.1 },
+            );
+            document
+              .querySelectorAll(".fade-in-up:not(.visible)")
+              .forEach((el) => observer.observe(el));
+          });
+        } else {
+          renderFeaturedProjects();
           const observer = new IntersectionObserver(
             (entries) => {
               entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  const el = entry.target;
-                  const target = parseInt(el.getAttribute("data-target"), 10);
-                  if (isNaN(target)) return;
-                  let current = 0;
-                  const increment = target / 35; // smooth increment
-                  const updateCounter = () => {
-                    current += increment;
-                    if (current < target) {
-                      el.innerText = Math.floor(current);
-                      requestAnimationFrame(updateCounter);
-                    } else {
-                      el.innerText = target;
-                    }
-                  };
-                  updateCounter();
-                  observer.unobserve(el);
-                }
+                if (entry.isIntersecting) entry.target.classList.add("visible");
               });
             },
-            { threshold: 0.4, rootMargin: "0px" },
+            { threshold: 0.1 },
           );
-
-          statNumbers.forEach((num) => observer.observe(num));
+          document
+            .querySelectorAll(".fade-in-up:not(.visible)")
+            .forEach((el) => observer.observe(el));
         }
-
-        // ========== FIX MOBILE MENU & CLOSE ON LINK CLICK (handled by common.js but re-run safety) ==========
-        function ensureMobileMenuConsistency() {
-          // common.js already handles toggle, but in case of dynamic reflow we double-check.
-          // No extra action needed - header is injected by common.js.
-          // but we need to make sure that theme toggle works fine.
-        }
-
-        // ========== DOM CONTENT LOADED ==========
-        document.addEventListener("DOMContentLoaded", () => {
-          loadFeatured();
-          initStatsCounter();
-          setTimeout(typeEffect, 400);
-
-          // Small fix: ensure that any external link in featured projects opens safely
-          document.querySelectorAll(".btn-link").forEach((link) => {
-            if (
-              link.getAttribute("href") &&
-              link.getAttribute("href") !== "#"
-            ) {
-              link.setAttribute("target", "_blank");
-              link.setAttribute("rel", "noopener noreferrer");
-            }
-          });
-
-          // Additional responsive touch: close mobile menu if open on window resize
-          let resizeTimer;
-          window.addEventListener("resize", () => {
-            if (resizeTimer) clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-              const navLinks = document.getElementById("nav-links");
-              if (
-                navLinks &&
-                navLinks.classList.contains("show") &&
-                window.innerWidth > 768
-              ) {
-                navLinks.classList.remove("show");
-              }
-            }, 150);
-          });
+      })();
+    </script>
+    <script>
+      // fallback for any images broken: add placeholder for missing project images
+      (function () {
+        const handleImageError = (img) => {
+          img.onerror = null;
+          img.src = "https://picsum.photos/id/26/400/260";
+        };
+        document.querySelectorAll(".project-img img").forEach((img) => {
+          img.addEventListener("error", () => handleImageError(img));
         });
       })();
     </script>

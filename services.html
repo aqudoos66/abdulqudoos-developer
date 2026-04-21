@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services | Abdul Qudoos</title>
+    <title>Services | Abdul Qudoos – Web Dev, Backend, AI & Research</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -20,8 +20,8 @@
         background: var(--card-bg);
         border: 1px solid var(--border);
         backdrop-filter: var(--glass-blur);
-        padding: 3rem 2rem;
-        border-radius: 24px;
+        padding: 2.5rem 1.8rem;
+        border-radius: 28px;
         text-align: center;
         transition: var(--transition);
       }
@@ -31,7 +31,7 @@
         background: rgba(30, 34, 48, 0.5);
       }
       .service-icon {
-        font-size: 3rem;
+        font-size: 2.8rem;
         color: var(--primary);
         margin-bottom: 1.5rem;
         text-shadow: 0 0 20px var(--primary-glow);
@@ -39,16 +39,55 @@
       .service-card h3 {
         font-size: 1.4rem;
         color: var(--text-light);
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
       }
       .service-card p {
         color: var(--text-muted);
+        font-size: 0.98rem;
+        line-height: 1.5;
+      }
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0 1.5rem;
+      }
+      .info-badge {
+        background: rgba(129, 140, 248, 0.12);
+        border: 1px solid rgba(129, 140, 248, 0.25);
+        border-radius: 60px;
+        padding: 0.4rem 1.2rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--primary);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .info-badge i {
+        font-size: 0.9rem;
+      }
+      .service-overview {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        backdrop-filter: var(--glass-blur);
+        text-align: center;
+      }
+      .service-overview p {
+        color: var(--text-muted);
         font-size: 1.05rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
       }
       .cta-section {
         text-align: center;
-        margin: 5rem auto;
-        padding: 4rem 2rem;
+        margin: 4rem auto 3rem;
+        padding: 3rem 2rem;
         background: linear-gradient(
           180deg,
           rgba(129, 140, 248, 0.05),
@@ -76,10 +115,21 @@
         pointer-events: none;
       }
       .cta-section p {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: 600;
         color: var(--text-light);
-        margin-bottom: 2rem;
+        margin-bottom: 1.8rem;
+      }
+      @media (max-width: 640px) {
+        .service-card {
+          padding: 1.8rem;
+        }
+        .service-overview p {
+          font-size: 0.95rem;
+        }
+        .cta-section p {
+          font-size: 1.2rem;
+        }
       }
     </style>
   </head>
@@ -90,46 +140,114 @@
       <div class="container">
         <div class="section-header fade-in-up">
           <h1>Services</h1>
-          <p>What I can do for you</p>
+          <p>End‑to‑end development, AI integration & research support</p>
         </div>
+
+        <!-- Overview / value proposition (mirroring LinkedIn description) -->
+        <div class="service-overview fade-in-up">
+          <div class="badge-row">
+            <span class="info-badge"
+              ><i class="fas fa-check-circle"></i> Available for remote
+              work</span
+            >
+            <span class="info-badge"
+              ><i class="fas fa-tag"></i> Contact for pricing</span
+            >
+            <span class="info-badge"
+              ><i class="fas fa-globe"></i> Worldwide</span
+            >
+          </div>
+          <p>
+            I provide end‑to‑end solutions in
+            <strong
+              >Web Application Development, Backend Systems, Database Design,
+              and AI Integration</strong
+            >. I build secure, scalable web apps using
+            <strong>Laravel, PHP, C#, and MySQL</strong>, tailored for
+            businesses and academic projects. I also offer technical research
+            support, including IEEE‑format documentation and system design
+            guidance. Focused on delivering reliable, production‑ready
+            solutions.
+          </p>
+        </div>
+
+        <!-- Services grid – expanded based on LinkedIn profile -->
         <div class="services-grid">
           <div class="service-card fade-in-up">
-            <i class="fas fa-code service-icon"></i>
-            <h3>Laravel Development</h3>
+            <i class="fas fa-laptop-code service-icon"></i>
+            <h3>Web Application Development</h3>
             <p>
-              Custom web applications, MVC architecture, authentication systems,
-              and CRUD operations using Laravel PHP framework.
+              Custom web apps using Laravel, PHP, C#. MVC architecture, secure
+              authentication, admin panels, and full‑stack integration. Perfect
+              for startups, enterprises, and academic systems.
             </p>
           </div>
           <div class="service-card fade-in-up">
             <i class="fas fa-cloud-upload-alt service-icon"></i>
-            <h3>RESTful API Development</h3>
+            <h3>Backend Systems & API Development</h3>
             <p>
-              Secure, scalable APIs with JSON responses, JWT authentication, and
-              complete Postman documentation.
+              RESTful APIs, microservices, third‑party integrations (payment,
+              SMS, AI). JWT, OAuth, Postman documentation, and scalable backend
+              logic.
             </p>
           </div>
           <div class="service-card fade-in-up">
             <i class="fas fa-database service-icon"></i>
             <h3>Database Design & Optimization</h3>
             <p>
-              MySQL schema design, query optimization, indexing strategies, and
-              database administration.
+              MySQL / PostgreSQL schema design, indexing, query optimization,
+              data migration, and database administration for high‑performance
+              applications.
             </p>
           </div>
           <div class="service-card fade-in-up">
-            <i class="fas fa-laptop-code service-icon"></i>
-            <h3>Full Stack Integration</h3>
+            <i class="fas fa-brain service-icon"></i>
+            <h3>AI Integration & LLM APIs</h3>
             <p>
-              Connecting backend logic with frontend interfaces using
-              HTML/CSS/JS and modern frameworks.
+              Integrate OpenAI, OpenRouter, Mistral, or custom LLMs into your
+              apps. AI‑powered content generation, voice assistants, and
+              intelligent automation.
+            </p>
+          </div>
+          <div class="service-card fade-in-up">
+            <i class="fas fa-code-branch service-icon"></i>
+            <h3>Custom Software Development</h3>
+            <p>
+              Tailored software solutions for unique business needs. From CRM,
+              inventory systems to conference management platforms – built with
+              clean, maintainable code.
+            </p>
+          </div>
+          <div class="service-card fade-in-up">
+            <i class="fas fa-file-alt service-icon"></i>
+            <h3>Technical Research Support</h3>
+            <p>
+              IEEE‑format documentation, system design guidance, literature
+              review, and research paper assistance for engineering & computer
+              science projects.
             </p>
           </div>
         </div>
+
+        <!-- Additional note about lead generation? (optional from LinkedIn but can be mentioned) -->
+        <div class="text-center fade-in-up" style="margin: -1rem 0 2rem">
+          <span
+            class="info-badge"
+            style="
+              background: rgba(20, 184, 166, 0.1);
+              border-color: var(--secondary);
+              color: var(--secondary);
+            "
+          >
+            <i class="fas fa-chart-line"></i> Lead generation support available
+          </span>
+        </div>
+
+        <!-- Call to action -->
         <div class="cta-section fade-in-up">
-          <p>Need a reliable backend for your next project?</p>
+          <p>Ready to build something great? Let’s discuss your project.</p>
           <a href="contact.html" class="btn btn-primary"
-            >Hire Me <i class="fas fa-arrow-right"></i
+            >Hire Me / Get Quote <i class="fas fa-arrow-right"></i
           ></a>
         </div>
       </div>
