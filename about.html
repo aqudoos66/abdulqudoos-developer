@@ -2,461 +2,375 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Abdul Qudoos – Laravel & Generative AI Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <!-- Primary Technical SEO Meta Tags -->
+    <title>About Abdul Qudoos | Backend Engineer, AI Developer & Researcher</title>
+    <meta name="title" content="About Abdul Qudoos | Backend Engineer, AI Developer & Researcher" />
+    <meta
+      name="description"
+      content="Learn more about Abdul Qudoos, Computer Science student at QUEST Nawabshah, published IJIST researcher, and backend developer specializing in Laravel, MySQL, Python, and Generative AI."
+    />
+    <meta name="keywords" content="Abdul Qudoos About, Backend Engineer Bio, QUEST Nawabshah, Laravel Developer Pakistan, Generative AI Developer, Computer Science Resume" />
+    <meta name="author" content="Abdul Qudoos" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://abdulqudoos-developer.vercel.app/about.html" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://abdulqudoos-developer.vercel.app/about.html" />
+    <meta property="og:site_name" content="Abdul Qudoos Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="About Abdul Qudoos - Backend Developer & AI Engineer" />
+    <meta property="og:description" content="Education, industry experience, certifications, and technical proficiencies of Abdul Qudoos." />
+    <meta property="og:image" content="https://abdulqudoos-developer.vercel.app/img/abdul%20qudoos%20php%20developer.jpeg" />
+    <meta property="og:image:alt" content="Abdul Qudoos - Computer Science Student and Developer" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="800" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://abdulqudoos-developer.vercel.app/about.html" />
+    <meta name="twitter:title" content="About Abdul Qudoos - Backend Developer & AI Engineer" />
+    <meta name="twitter:description" content="Education, industry experience, certifications, and technical proficiencies of Abdul Qudoos." />
+    <meta name="twitter:image" content="https://abdulqudoos-developer.vercel.app/img/abdul%20qudoos%20php%20developer.jpeg" />
+    <meta name="twitter:image:alt" content="Abdul Qudoos - Computer Science Student and Developer" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' font-weight='800' fill='white'>AQ</text></svg>" />
+    <meta name="theme-color" content="#090d16" />
+
+    <!-- Performance Resource Hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Styles -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      /* Additional styles for toggle buttons and certificates */
-      .toggle-buttons {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 2rem;
-        flex-wrap: wrap;
-      }
-      .toggle-btn {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid var(--border);
-        padding: 0.6rem 1.5rem;
-        border-radius: 40px;
-        color: var(--text-muted);
-        cursor: pointer;
-        font-weight: 600;
-        transition: var(--transition);
-      }
-      .toggle-btn.active {
-        background: var(--primary);
-        color: white;
-        border-color: var(--primary);
-      }
-      .toggle-btn:hover:not(.active) {
-        background: rgba(129, 140, 248, 0.2);
-        border-color: var(--primary);
-        color: var(--text-light);
-      }
-      .content-panel {
-        display: none;
-      }
-      .content-panel.active-panel {
-        display: block;
-      }
-      .timeline {
-        border-left: 2px solid var(--border-hover);
-        margin-left: 1rem;
-        padding-left: 1.5rem;
-      }
-      .timeline-item {
-        margin-bottom: 2rem;
-        position: relative;
-      }
-      .timeline-item::before {
-        content: "";
-        position: absolute;
-        left: -1.8rem;
-        top: 0.25rem;
-        width: 12px;
-        height: 12px;
-        background: var(--primary);
-        border-radius: 50%;
-        box-shadow: 0 0 10px var(--primary-glow);
-      }
-      .timeline-date {
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 0.5rem;
-        font-size: 0.9rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-      }
-      .timeline-content h4 {
-        font-size: 1.2rem;
-        color: var(--text-light);
-        margin-bottom: 0.5rem;
-      }
-      .timeline-content p {
-        color: var(--text-muted);
-        margin-bottom: 0.25rem;
-      }
-      .cert-badge {
-        display: inline-block;
-        background: rgba(20, 184, 166, 0.15);
-        border: 1px solid var(--secondary);
-        color: var(--secondary);
-        padding: 0.2rem 0.7rem;
-        border-radius: 20px;
-        font-size: 0.7rem;
-        font-weight: 600;
-        margin-top: 0.5rem;
-      }
-      .about-text h2 {
-        font-size: 2rem;
-        color: var(--text-light);
-        margin-bottom: 0.5rem;
-      }
-      .about-headline {
-        font-size: 1.2rem;
-        color: var(--primary);
-        margin-bottom: 1.5rem;
-        font-weight: 500;
-        border-left: 3px solid var(--primary);
-        padding-left: 1rem;
-      }
-      .about-text p {
-        color: var(--text-muted);
-        margin-bottom: 1.5rem;
-        font-size: 1.05rem;
-      }
-      .skills-section h3 {
-        font-size: 1.3rem;
-        margin: 2rem 0 1rem;
-      }
-      .skill-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-        margin-bottom: 1.5rem;
-      }
-      .skill-tags span {
-        background: rgba(255, 255, 255, 0.03);
-        padding: 0.5rem 1.2rem;
-        border-radius: 100px;
-        border: 1px solid var(--border);
-        transition: var(--transition);
-        color: var(--text-muted);
-        font-size: 0.9rem;
-        font-weight: 500;
-      }
-      .skill-tags span:hover {
-        border-color: var(--primary);
-        color: var(--text-light);
-        transform: translateY(-2px);
-        background: rgba(129, 140, 248, 0.1);
-      }
-      .social-links-about {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-      }
-      .social-links-about a {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid var(--border);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--text-light);
-        font-size: 1.2rem;
-        transition: var(--transition);
-        text-decoration: none;
-      }
-      .social-links-about a:hover {
-        background: var(--primary);
-        border-color: var(--primary);
-        transform: translateY(-3px);
-      }
-      .gallery-btn-container {
-        margin-top: 2rem;
-        text-align: left;
-      }
-      .btn-gallery {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.8rem;
-        background: rgba(129, 140, 248, 0.1);
-        border: 1px solid var(--primary);
-        color: var(--primary);
-        padding: 0.8rem 1.8rem;
-        border-radius: 40px;
-        font-weight: 600;
-        transition: var(--transition);
-        text-decoration: none;
-      }
-      .btn-gallery:hover {
-        background: var(--primary);
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(129, 140, 248, 0.3);
-      }
-      @media (max-width: 768px) {
-        .about-headline {
-          font-size: 1rem;
+
+    <!-- Structured Data (JSON-LD: AboutPage + BreadcrumbList) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "AboutPage",
+          "@id": "https://abdulqudoos-developer.vercel.app/about.html#about",
+          "name": "About Abdul Qudoos",
+          "description": "Background, technical experience, university education, and certifications of Abdul Qudoos.",
+          "url": "https://abdulqudoos-developer.vercel.app/about.html",
+          "mainEntity": {
+            "@type": "Person",
+            "name": "Abdul Qudoos",
+            "jobTitle": "Backend Developer & AI Systems Engineer",
+            "alumniOf": {
+              "@type": "EducationalOrganization",
+              "name": "Quaid-e-Awam University of Engineering, Science & Technology (QUEST), Nawabshah"
+            },
+            "knowsAbout": [
+              "Laravel Development",
+              "Database Administration",
+              "Generative AI",
+              "RESTful APIs",
+              "Software Engineering Research"
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://abdulqudoos-developer.vercel.app/about.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://abdulqudoos-developer.vercel.app/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About",
+              "item": "https://abdulqudoos-developer.vercel.app/about.html"
+            }
+          ]
         }
-      }
-    </style>
+      ]
+    }
+    </script>
   </head>
   <body>
-    <div class="ambient-glow secondary"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="ambient-glow secondary" aria-hidden="true"></div>
+
     <header id="main-header"></header>
-    <main class="page-container">
+
+    <main id="main-content" class="page-container">
       <div class="container">
         <div class="section-header fade-in-up">
-          <h1>About Me</h1>
-          <p>Computer Science student & Backend Developer</p>
+          <span class="section-tag">Biography & Credentials</span>
+          <h1>About Abdul Qudoos</h1>
+          <p>Computer Science student, published researcher & backend systems architect.</p>
         </div>
+
         <div class="about-grid">
-          <!-- Left Column: Summary, Skills, Social -->
-          <div class="about-text fade-in-up">
-            <h2>Abdul Qudoos</h2>
+          <!-- Left Column: Biography, Skills, Social Links -->
+          <div class="about-intro-card fade-in-up">
             <div class="about-headline">
-              <i class="fas fa-quote-left" style="margin-right: 0.5rem"></i>
-              I Build Scalable SaaS & AI Web Applications for Startups | Laravel
-              & Generative AI Developer | Turning Ideas into Revenue-Ready
-              Products
+              "I build resilient backend architectures, high-throughput REST APIs, and generative AI systems that turn ideas into reliable production platforms."
             </div>
-            <p>
-              I'm a Computer Science student at
-              <strong
-                >Quaid-e-Awam University of Engineering, Science & Technology,
-                Nawabshah</strong
-              >, specializing in backend development using
-              <strong>Laravel, PHP, Python, C#, and MySQL</strong>. I build
-              RESTful APIs, database-driven systems, and full-stack web
-              applications. I help startups and coaches turn their ideas into
-              scalable, secure, and revenue-ready web platforms.
-            </p>
-            <p>
-              My published research on
-              <strong>Smart Conference Management System (SCMS)</strong> (IJIST,
-              2025) demonstrates my ability to design integrated platforms with
-              role-based dashboards and automated workflows. I have presented
-              this work at the 1st International Conference on Computing
-              Sciences and Emerging Trends (CSET'26). I'm passionate about clean
-              code, database optimization, and solving real-world problems
-              through technology — including AI-powered features like chatbots
-              and voice assistants.
-            </p>
 
-            <div class="skills-section">
-              <h3>Technical Skills</h3>
-              <div class="skill-tags">
-                <span>Laravel</span><span>PHP (OOP)</span><span>Python</span>
-                <span>C# / ASP.NET</span><span>MySQL / SQL</span>
-                <span>REST API</span><span>Git & GitHub</span>
-                <span>HTML/CSS/JS</span><span>Generative AI</span>
-                <span>MVC Architecture</span>
+            <div class="about-text">
+              <p>
+                I am a final-year Computer Science undergraduate at
+                <strong>Quaid-e-Awam University of Engineering, Science & Technology (QUEST), Nawabshah</strong>.
+                My focus lies in backend engineering, database schema optimization, and practical Generative AI integration using
+                <strong>Laravel, PHP, Python, C#, and MySQL</strong>.
+              </p>
+
+              <p>
+                As the primary co-author of the peer-reviewed research paper
+                <strong>"Smart Conference Management System (SCMS)"</strong> published in the
+                <em>International Journal of Innovations in Science & Technology (IJIST, Nov 2025)</em>,
+                I have proven experience tackling real-world distributed workflow bottlenecks, cutting conference setup latency by 98% and achieving an evaluated 4.7/5 user satisfaction score.
+              </p>
+
+              <p>
+                I prioritize clean code architecture, database index tuning, secure authentication gates, and responsive interfaces.
+              </p>
+            </div>
+
+            <!-- Technical Skills Matrix -->
+            <div style="margin-top: 2rem;">
+              <h3 style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.8rem; font-weight: 700;">
+                <i class="fas fa-code" style="color: var(--primary-light); margin-right: 0.4rem;" aria-hidden="true"></i> Core Technical Stack
+              </h3>
+              <div class="tech-items" style="margin-bottom: 1.5rem;">
+                <span class="tech-pill"><i class="fab fa-laravel"></i> Laravel</span>
+                <span class="tech-pill"><i class="fab fa-php"></i> PHP (OOP)</span>
+                <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+                <span class="tech-pill"><i class="fas fa-database"></i> MySQL</span>
+                <span class="tech-pill"><i class="fas fa-network-wired"></i> REST APIs</span>
+                <span class="tech-pill"><i class="fas fa-robot"></i> Generative AI</span>
+                <span class="tech-pill"><i class="fas fa-code"></i> C# / ASP.NET</span>
+                <span class="tech-pill"><i class="fab fa-js"></i> JavaScript</span>
               </div>
 
-              <h3>Tools & Platforms</h3>
-              <div class="skill-tags">
-                <span>Postman</span><span>phpMyAdmin</span><span>VS Code</span>
-                <span>GitHub</span><span>Windows/Linux</span><span>Apache</span>
-                <span>Hugging Face</span><span>OpenRouter API</span>
+              <h3 style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.8rem; font-weight: 700;">
+                <i class="fas fa-tools" style="color: var(--primary-light); margin-right: 0.4rem;" aria-hidden="true"></i> Developer Tooling & Platforms
+              </h3>
+              <div class="tech-items" style="margin-bottom: 2rem;">
+                <span class="tech-pill"><i class="fab fa-git-alt"></i> Git & GitHub</span>
+                <span class="tech-pill"><i class="fas fa-vial"></i> Postman</span>
+                <span class="tech-pill"><i class="fas fa-server"></i> phpMyAdmin</span>
+                <span class="tech-pill"><i class="fas fa-cloud"></i> OpenRouter</span>
+                <span class="tech-pill"><i class="fas fa-space-shuttle"></i> Hugging Face</span>
+                <span class="tech-pill"><i class="fab fa-linux"></i> Linux & Apache</span>
               </div>
             </div>
 
-            <div class="social-links-about">
-              <a href="https://github.com/aqudoos66" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/abdul-qudoos-896a3527b/"
-                target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a
-                href="https://abdulqudoosmastoi-portfolio.free.nf/i=1"
-                target="_blank"
-                ><i class="fas fa-globe"></i
-              ></a>
-            </div>
+            <!-- Social Links & Gallery CTA -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+              <div class="social-links" style="margin-top: 0;">
+                <a href="https://github.com/aqudoos66" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="GitHub Profile">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/abdul-qudoos-896a3527b/" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="LinkedIn Profile">
+                  <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="mailto:abdulqudoosdeveloper@gmail.com" class="social-link-btn" aria-label="Email Abdul Qudoos">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+              </div>
 
-            <div class="gallery-btn-container">
-              <a href="gallery.html" class="btn-gallery">
-                <i class="fas fa-images"></i> Visit My Gallery
-                <i class="fas fa-arrow-right"></i>
+              <a href="gallery.html" class="btn btn-outline btn-sm">
+                <i class="fas fa-images" aria-hidden="true"></i> View Project Gallery
               </a>
             </div>
           </div>
 
-          <!-- Right Column: Toggle Buttons + Dynamic Content -->
-          <div class="timeline-section fade-in-up">
-            <h3>Professional Journey</h3>
-            <div class="toggle-buttons">
-              <button class="toggle-btn active" data-target="experience">
-                💼 Experience
+          <!-- Right Column: Interactive Journey Tabs (Experience, Education, Certifications) -->
+          <div class="about-intro-card fade-in-up delay-1">
+            <h2 style="font-size: 1.35rem; color: var(--text-main); margin-bottom: 1.4rem; font-weight: 700;">
+              Professional Milestones
+            </h2>
+
+            <div class="timeline-tabs" role="tablist" aria-label="Professional Journey Tabs">
+              <button class="tab-btn active" data-tab="experience" role="tab" aria-selected="true" aria-controls="panel-experience">
+                <i class="fas fa-briefcase" aria-hidden="true"></i> Experience
               </button>
-              <button class="toggle-btn" data-target="education">
-                🎓 Education
+              <button class="tab-btn" data-tab="education" role="tab" aria-selected="false" aria-controls="panel-education">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i> Education
               </button>
-              <button class="toggle-btn" data-target="certifications">
-                📜 Certifications
+              <button class="tab-btn" data-tab="certifications" role="tab" aria-selected="false" aria-controls="panel-certifications">
+                <i class="fas fa-award" aria-hidden="true"></i> Certifications
               </button>
             </div>
 
-            <!-- Experience Panel (updated with LinkedIn roles) -->
-            <div id="experience" class="content-panel active-panel">
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="timeline-date">Jul 2025 – Aug 2025</div>
-                  <div class="timeline-content">
-                    <h4>Artificial Intelligence Intern</h4>
-                    <p>Arch Technologies · Remote</p>
-                    <p>
-                      Collaborated on Kaggle datasets, developed ML models,
-                      improved task efficiency with structured deadlines.
-                    </p>
-                  </div>
+            <!-- Tab 1: Experience Panel -->
+            <div id="panel-experience" class="tab-panel active" role="tabpanel">
+              <div class="timeline-track">
+                <div class="timeline-node">
+                  <div class="timeline-period">Jul 2025 – Aug 2025</div>
+                  <h3 class="timeline-title">Artificial Intelligence Intern</h3>
+                  <div class="timeline-subtitle">Arch Technologies · Remote</div>
+                  <p class="timeline-desc">
+                    Trained and benchmarked machine learning models on Kaggle datasets. Implemented data preprocessing pipelines, prompt tuning, and structured delivery milestones.
+                  </p>
                 </div>
-                <div class="timeline-item">
-                  <div class="timeline-date">Jan 2025 – Jun 2025</div>
-                  <div class="timeline-content">
-                    <h4>Backend Developer (Laravel)</h4>
-                    <p>Sindh Tech Solutions · On-site (Nawabshah)</p>
-                    <p>
-                      Built inventory systems, certificate verification, LMS
-                      modules, and RESTful APIs. Enhanced database performance
-                      and version control with Git.
-                    </p>
-                  </div>
+
+                <div class="timeline-node">
+                  <div class="timeline-period">Jan 2025 – Jun 2025</div>
+                  <h3 class="timeline-title">Backend Developer (Laravel)</h3>
+                  <div class="timeline-subtitle">Sindh Tech Solutions · On-site (Nawabshah)</div>
+                  <p class="timeline-desc">
+                    Engineered production inventory management modules, certificate verification workflows, and RESTful APIs. Streamlined relational MySQL schemas and integrated Git version control for team workflows.
+                  </p>
                 </div>
-                <div class="timeline-item">
-                  <div class="timeline-date">Jul 2024 – Aug 2024</div>
-                  <div class="timeline-content">
-                    <h4>IT Intern</h4>
-                    <p>FFBL, Karachi · On-site</p>
-                    <p>
-                      Hands-on experience in IT operations, infrastructure, and
-                      technical support.
-                    </p>
-                  </div>
+
+                <div class="timeline-node">
+                  <div class="timeline-period">Jul 2024 – Aug 2024</div>
+                  <h3 class="timeline-title">IT Infrastructure Intern</h3>
+                  <div class="timeline-subtitle">Fauji Fertilizer Bin Qasim Ltd (FFBL) · Karachi</div>
+                  <p class="timeline-desc">
+                    Gained hands-on experience in enterprise IT operations, server maintenance, network diagnostics, and technical systems support.
+                  </p>
                 </div>
-                <div class="timeline-item">
-                  <div class="timeline-date">Jun 2024 – Jul 2024</div>
-                  <div class="timeline-content">
-                    <h4>Frontend Web Developer</h4>
-                    <p>Code Alpha · Remote</p>
-                    <p>
-                      Developed responsive interfaces using JavaScript, HTML,
-                      and CSS. Collaborated on UI/UX improvements.
-                    </p>
-                  </div>
+
+                <div class="timeline-node">
+                  <div class="timeline-period">Jun 2024 – Jul 2024</div>
+                  <h3 class="timeline-title">Frontend Web Developer</h3>
+                  <div class="timeline-subtitle">Code Alpha · Remote</div>
+                  <p class="timeline-desc">
+                    Developed responsive web components with JavaScript, HTML5, and CSS3, focusing on user experience, cross-browser compatibility, and accessibility.
+                  </p>
                 </div>
               </div>
             </div>
 
-            <!-- Education Panel (same but enhanced) -->
-            <div id="education" class="content-panel">
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="timeline-date">
-                    2022 – Present (Expected 2026)
-                  </div>
-                  <div class="timeline-content">
-                    <h4>B.E. Computer Science</h4>
-                    <p>
-                      Quaid-e-Awam University of Engineering, Sciences &
-                      Technology, Nawabshah
-                    </p>
-                    <p>CGPA: Ongoing | EQF Level 6</p>
-                  </div>
+            <!-- Tab 2: Education Panel -->
+            <div id="panel-education" class="tab-panel" role="tabpanel">
+              <div class="timeline-track">
+                <div class="timeline-node">
+                  <div class="timeline-period">2022 – Present (Expected 2026)</div>
+                  <h3 class="timeline-title">B.E. in Computer Science</h3>
+                  <div class="timeline-subtitle">Quaid-e-Awam University of Engineering, Science & Technology (QUEST), Nawabshah</div>
+                  <p class="timeline-desc">
+                    Relevant Coursework: Data Structures & Algorithms, Database Management Systems, Software Engineering, Artificial Intelligence, Web Engineering, Operating Systems, Computer Networks.
+                  </p>
                 </div>
-                <div class="timeline-item">
-                  <div class="timeline-date">2024</div>
-                  <div class="timeline-content">
-                    <h4>Technical Domain (NFTP)</h4>
-                    <p>
-                      QUEST Nawabshah — Web development & database
-                      administration.
-                    </p>
-                  </div>
+
+                <div class="timeline-node">
+                  <div class="timeline-period">2024</div>
+                  <h3 class="timeline-title">National Freelance Training Program (NFTP)</h3>
+                  <div class="timeline-subtitle">QUEST Nawabshah Campus</div>
+                  <p class="timeline-desc">
+                    Specialized training in technical domain: full-stack web development, client communication, and database administration.
+                  </p>
                 </div>
               </div>
             </div>
 
-            <!-- Certifications Panel (expanded with LinkedIn credentials) -->
-            <div id="certifications" class="content-panel">
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="timeline-date">2025</div>
-                  <div class="timeline-content">
-                    <h4>Generative AI Application Developer</h4>
-                    <p>HEC / NCEAC — 6 weeks training program</p>
-                    <span class="cert-badge"
-                      ><i class="fas fa-certificate"></i> Verified</span
-                    >
-                  </div>
+            <!-- Tab 3: Certifications Panel -->
+            <div id="panel-certifications" class="tab-panel" role="tabpanel">
+              <div class="timeline-track">
+                <div class="timeline-node">
+                  <div class="timeline-period">2025 · Verified</div>
+                  <h3 class="timeline-title">Generative AI Application Developer</h3>
+                  <div class="timeline-subtitle">Higher Education Commission (HEC) / NCEAC</div>
+                  <p class="timeline-desc">
+                    Intensive 6-week training on building LLM applications, prompt engineering, embedding vector stores, and OpenAI/OpenRouter API integration.
+                  </p>
                 </div>
-                <div class="timeline-item">
-                  <div class="timeline-date">2025</div>
-                  <div class="timeline-content">
-                    <h4>Certified Database Administrator</h4>
-                    <p>Sukkur IBA University</p>
-                    <span class="cert-badge"
-                      ><i class="fas fa-database"></i> Professional</span
-                    >
-                  </div>
+
+                <div class="timeline-node">
+                  <div class="timeline-period">2025 · Professional</div>
+                  <h3 class="timeline-title">Certified Database Administrator</h3>
+                  <div class="timeline-subtitle">Sukkur IBA University</div>
+                  <p class="timeline-desc">
+                    Advanced relational database design, query optimization, indexing strategies, normalization, transactions, and backup administration.
+                  </p>
                 </div>
-                <div class="timeline-item">
-                  <div class="timeline-date">2025</div>
-                  <div class="timeline-content">
-                    <h4>HTML, CSS, JavaScript for Web Developers</h4>
-                    <p>Johns Hopkins University (Coursera)</p>
-                    <span class="cert-badge"
-                      ><i class="fas fa-certificate"></i> Verified</span
-                    >
-                  </div>
+
+                <div class="timeline-node">
+                  <div class="timeline-period">2025 · Verified</div>
+                  <h3 class="timeline-title">HTML, CSS, JavaScript for Web Developers</h3>
+                  <div class="timeline-subtitle">Johns Hopkins University (Coursera)</div>
+                  <p class="timeline-desc">
+                    Modern frontend development standards, responsive design principles, and client-side AJAX/API consumption.
+                  </p>
                 </div>
-                <div class="timeline-item">
-                  <div class="timeline-date">2024</div>
-                  <div class="timeline-content">
-                    <h4>Database Administration (PITP)</h4>
-                    <p>QUEST Nawabshah</p>
-                    <span class="cert-badge"
-                      ><i class="fas fa-database"></i> Professional</span
-                    >
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="timeline-date">2024</div>
-                  <div class="timeline-content">
-                    <h4>Prompt Engineering for ChatGPT</h4>
-                    <p>Great Learning (Online)</p>
-                    <span class="cert-badge"
-                      ><i class="fas fa-magic"></i> Certified</span
-                    >
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="timeline-date">2024</div>
-                  <div class="timeline-content">
-                    <h4>Technical Domain (NFTP)</h4>
-                    <p>QUEST Nawabshah — Web & Database Certification</p>
-                    <span class="cert-badge"
-                      ><i class="fas fa-code"></i> Completed</span
-                    >
-                  </div>
+
+                <div class="timeline-node">
+                  <div class="timeline-period">2024 · Verified</div>
+                  <h3 class="timeline-title">Prompt Engineering for ChatGPT</h3>
+                  <div class="timeline-subtitle">Great Learning</div>
+                  <p class="timeline-desc">
+                    Instruction formatting, few-shot prompting, and context-window optimization for enterprise AI models.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Call to action -->
+        <div class="cta-banner fade-in-up" style="margin-top: 3.5rem;">
+          <h2>Interested in Reviewing Full Code or Academic Papers?</h2>
+          <p>
+            Check out my peer-reviewed publications or reach out directly for project collaborations and full-time inquiries.
+          </p>
+          <div class="btn-group" style="justify-content: center;">
+            <a href="publications.html" class="btn btn-primary">
+              <i class="fas fa-book-open" aria-hidden="true"></i> View Publication Details
+            </a>
+            <a href="contact.html" class="btn btn-outline">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Get in Touch
+            </a>
+          </div>
+        </div>
       </div>
     </main>
+
     <footer id="main-footer"></footer>
+
     <script src="common.js"></script>
     <script>
-      // Toggle functionality for Experience / Education / Certifications
-      const btns = document.querySelectorAll(".toggle-btn");
-      const panels = {
-        experience: document.getElementById("experience"),
-        education: document.getElementById("education"),
-        certifications: document.getElementById("certifications"),
-      };
+      // Accessible Tab Switching
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabBtns = document.querySelectorAll(".tab-btn");
+        const panels = {
+          experience: document.getElementById("panel-experience"),
+          education: document.getElementById("panel-education"),
+          certifications: document.getElementById("panel-certifications"),
+        };
 
-      btns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const target = btn.getAttribute("data-target");
-          btns.forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
-          Object.values(panels).forEach((panel) => {
-            if (panel) panel.classList.remove("active-panel");
+        tabBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const target = btn.getAttribute("data-tab");
+
+            tabBtns.forEach((b) => {
+              b.classList.remove("active");
+              b.setAttribute("aria-selected", "false");
+            });
+
+            btn.classList.add("active");
+            btn.setAttribute("aria-selected", "true");
+
+            Object.values(panels).forEach((panel) => {
+              if (panel) panel.classList.remove("active");
+            });
+
+            if (panels[target]) {
+              panels[target].classList.add("active");
+            }
           });
-          if (panels[target]) panels[target].classList.add("active-panel");
         });
       });
     </script>

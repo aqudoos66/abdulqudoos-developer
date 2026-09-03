@@ -2,109 +2,216 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Research | Ongoing & Completed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <!-- Primary Technical SEO Meta Tags -->
+    <title>Research & Technical Investigations | Abdul Qudoos</title>
+    <meta name="title" content="Research & Technical Investigations | Abdul Qudoos" />
+    <meta
+      name="description"
+      content="Academic research, distributed software systems, and AI-driven automation investigations by Abdul Qudoos at QUEST Nawabshah."
+    />
+    <meta name="keywords" content="Abdul Qudoos Research, Computer Science Research, Smart Conference Management System, AI Peer Review, QUEST Nawabshah, Distributed Systems" />
+    <meta name="author" content="Abdul Qudoos" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://abdulqudoos-developer.vercel.app/research.html" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://abdulqudoos-developer.vercel.app/research.html" />
+    <meta property="og:site_name" content="Abdul Qudoos Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Research & Technical Investigations | Abdul Qudoos" />
+    <meta property="og:description" content="Academic research and experimental engineering projects by Abdul Qudoos." />
+    <meta property="og:image" content="https://abdulqudoos-developer.vercel.app/img/projects/smart%20conference%20management%20system%20abdul%20qudoos%20php%20developer.png" />
+    <meta property="og:image:alt" content="Smart Conference Management System - Research by Abdul Qudoos" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://abdulqudoos-developer.vercel.app/research.html" />
+    <meta name="twitter:title" content="Research & Technical Investigations | Abdul Qudoos" />
+    <meta name="twitter:description" content="Academic research and experimental engineering projects by Abdul Qudoos." />
+    <meta name="twitter:image" content="https://abdulqudoos-developer.vercel.app/img/projects/smart%20conference%20management%20system%20abdul%20qudoos%20php%20developer.png" />
+    <meta name="twitter:image:alt" content="Smart Conference Management System - Research by Abdul Qudoos" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' font-weight='800' fill='white'>AQ</text></svg>" />
+    <meta name="theme-color" content="#090d16" />
+
+    <!-- Performance Resource Hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Styles -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      .research-area {
-        margin-bottom: 4rem;
-      }
-      .research-area h2 {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-        color: var(--text-light);
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-      }
-      .research-area h2 i {
-        color: var(--primary);
-      }
-      .research-card {
-        background: var(--card-bg);
-        border: 1px solid var(--border);
-        backdrop-filter: var(--glass-blur);
-        padding: 2rem;
-        border-radius: 20px;
-        margin-bottom: 1.5rem;
-        transition: var(--transition);
-        position: relative;
-      }
-      .research-card:hover {
-        border-color: var(--border-hover);
-        transform: translateX(6px);
-        background: rgba(30, 34, 48, 0.5);
-      }
-      .research-card h3 {
-        font-size: 1.3rem;
-        margin-bottom: 0.6rem;
-        color: var(--text-light);
-      }
-      .research-card p {
-        color: var(--text-muted);
-        line-height: 1.6;
-      }
-      .research-tag {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        background: rgba(129, 140, 248, 0.1);
-        border: 1px solid rgba(129, 140, 248, 0.2);
-        color: var(--primary);
-        padding: 0.3rem 0.8rem;
-        border-radius: 100px;
-        font-size: 0.75rem;
-        font-weight: 500;
-      }
-    </style>
+
+    <!-- Structured Data (JSON-LD: CollectionPage + BreadcrumbList) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://abdulqudoos-developer.vercel.app/research.html#research",
+          "name": "Research Initiatives - Abdul Qudoos",
+          "description": "Scientific inquiries in conference automation, database optimization, and voice AI pipelines.",
+          "url": "https://abdulqudoos-developer.vercel.app/research.html",
+          "author": {
+            "@type": "Person",
+            "name": "Abdul Qudoos",
+            "url": "https://abdulqudoos-developer.vercel.app/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://abdulqudoos-developer.vercel.app/research.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://abdulqudoos-developer.vercel.app/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Research",
+              "item": "https://abdulqudoos-developer.vercel.app/research.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
-    <div class="ambient-glow"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="ambient-glow secondary" aria-hidden="true"></div>
+
     <header id="main-header"></header>
-    <main class="page-container">
+
+    <main id="main-content" class="page-container">
       <div class="container">
         <div class="section-header fade-in-up">
-          <h1>Research</h1>
-          <p>Exploring AI, distributed systems, and software engineering</p>
+          <span class="section-tag">Scientific Inquiries</span>
+          <h1>Research & Technical Investigations</h1>
+          <p>Exploring automated academic systems, AI peer review pipelines, and database scalability.</p>
         </div>
 
-        <div class="research-area">
-          <h2 class="fade-in-up">
-            <i class="fas fa-check-circle"></i> Completed Research
-          </h2>
-          <div class="research-card fade-in-up">
-            <span
-              class="research-tag"
-              style="
-                background: rgba(20, 184, 166, 0.1);
-                border-color: rgba(20, 184, 166, 0.2);
-                color: var(--secondary);
-              "
-              >Published</span
-            >
-            <h3>Smart Conference Management System (SCMS)</h3>
-            <p>
-              An integrated platform for academic conference management
-              featuring automatic website generation, AI-assisted reviews, and
-              multi-role dashboards. The system reduced website setup time by
-              98% and achieved a 4.7/5 user satisfaction score.
-              <br /><br />
-              <strong>URL:</strong>
-              <a
-                href="https://journal.50sea.com/index.php/IJIST/article/view/1700"
-                >https://journal.50sea.com/index.php/IJIST/article/view/1700</a
-              >
+        <!-- Section: Completed & Published Research -->
+        <div class="section-header text-left fade-in-up" style="margin: 2.5rem 0 1.5rem;">
+          <h2><i class="fas fa-check-circle" style="color: var(--accent-green); margin-right: 0.5rem;" aria-hidden="true"></i> Completed & Published Research</h2>
+        </div>
+
+        <div class="publications-list">
+          <article class="research-card fade-in-up">
+            <div class="pub-header">
+              <span class="pill-badge success">Published in IJIST (2025)</span>
+              <span style="font-size: 0.85rem; color: var(--text-subtle); font-weight: 600;">November 2025</span>
+            </div>
+
+            <h3 class="pub-title">Smart Conference Management System (SCMS)</h3>
+            <div class="pub-authors">
+              Lead Student Author: <strong>Abdul Qudoos</strong> · QUEST Nawabshah
+            </div>
+            <p class="pub-abstract">
+              Engineered an automated software ecosystem for academic conferences that integrates real-time website generation, manuscript submission tracking, AI-assisted reviewer assignment, and automated multichannel notifications (Email & WhatsApp). Benchmarked with simulated datasets, achieving a <strong>98% decrease in conference website creation latency</strong> and an evaluated <strong>4.7/5 user satisfaction score</strong>.
             </p>
+            <div class="pub-metrics-bar">
+              <div class="metric-pill"><i class="fas fa-bolt" style="color: var(--primary-light);"></i> 98% Setup Reduction</div>
+              <div class="metric-pill"><i class="fas fa-star" style="color: var(--accent-amber);"></i> 4.7/5 Evaluated Score</div>
+              <div class="metric-pill"><i class="fas fa-robot" style="color: var(--secondary);"></i> LLM Metadata Extraction</div>
+            </div>
+            <div class="pub-links">
+              <a href="publications.html" class="btn btn-primary btn-sm">
+                <i class="fas fa-book-open" aria-hidden="true"></i> Read Publication Summary
+              </a>
+              <a href="https://journal.50sea.com/index.php/IJIST/article/view/1700" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Official Journal Record
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Section: Ongoing Research & Experiments -->
+        <div class="section-header text-left fade-in-up" style="margin: 3.5rem 0 1.5rem;">
+          <h2><i class="fas fa-flask" style="color: var(--primary-light); margin-right: 0.5rem;" aria-hidden="true"></i> Active & Ongoing Investigations</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card fade-in-up">
+            <div class="service-icon-box" aria-hidden="true">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>AI-Assisted Peer Review Pipelines</h3>
+            <p>
+              Investigating heuristic LLM prompt chains and embedding similarities for semantic paper-to-reviewer matching, automated reviewer compliance checks, and preliminary formatting validation.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-circle-notch"></i> Semantic topic matching</li>
+              <li><i class="fas fa-circle-notch"></i> Reviewer workload distribution</li>
+            </ul>
           </div>
-          <!-- Other completed research items remain unchanged -->
+
+          <div class="service-card fade-in-up delay-1">
+            <div class="service-icon-box" aria-hidden="true">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>Relational Database Indexing in Multi-Tenant Web Apps</h3>
+            <p>
+              Analyzing B-Tree composite index strategies and query execution caching in high-frequency multi-tenant Laravel systems to minimize query execution overhead on large datasets.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-circle-notch"></i> EXPLAIN query execution plans</li>
+              <li><i class="fas fa-circle-notch"></i> Connection pooling & memory benchmarking</li>
+            </ul>
+          </div>
+
+          <div class="service-card fade-in-up delay-2">
+            <div class="service-icon-box" aria-hidden="true">
+              <i class="fas fa-microphone-alt"></i>
+            </div>
+            <h3>Asynchronous Voice AI Pipelines</h3>
+            <p>
+              Designing lightweight client-server pipelines using Whisper ASR and gTTS audio streams to achieve sub-second voice-to-voice interaction over standard web connections without heavy GPU infrastructure.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-circle-notch"></i> Audio buffer chunking</li>
+              <li><i class="fas fa-circle-notch"></i> Deployed on Hugging Face Spaces</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Collaboration Callout -->
+        <div class="cta-banner fade-in-up" style="margin-top: 4rem;">
+          <h2>Interested in Co-Authoring or Technical Research?</h2>
+          <p>
+            I welcome collaborations on computer science research, software engineering empirical studies, and AI system implementations.
+          </p>
+          <div class="btn-group" style="justify-content: center;">
+            <a href="contact.html" class="btn btn-primary">
+              <i class="fas fa-envelope" aria-hidden="true"></i> Reach Out for Collaboration
+            </a>
+            <a href="about.html" class="btn btn-outline">
+              <i class="fas fa-user" aria-hidden="true"></i> View Academic Profile
+            </a>
+          </div>
         </div>
       </div>
     </main>
+
     <footer id="main-footer"></footer>
+
     <script src="common.js"></script>
   </body>
 </html>

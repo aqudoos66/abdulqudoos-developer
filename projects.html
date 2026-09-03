@@ -2,140 +2,323 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | Abdul Qudoos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <!-- Primary Technical SEO Meta Tags -->
+    <title>Featured Projects & Engineering Systems | Abdul Qudoos</title>
+    <meta name="title" content="Featured Projects & Engineering Systems | Abdul Qudoos" />
+    <meta
+      name="description"
+      content="Explore production-ready systems, full-stack Laravel applications, AI voice assistants, and published academic platforms developed by Abdul Qudoos."
+    />
+    <meta name="keywords" content="Abdul Qudoos Projects, Laravel Projects, AI Voice Assistant, EchoMind AI, SCMS Conference System, PHP Projects, MySQL, REST API Portfolio" />
+    <meta name="author" content="Abdul Qudoos" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://abdulqudoos-developer.vercel.app/projects.html" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://abdulqudoos-developer.vercel.app/projects.html" />
+    <meta property="og:site_name" content="Abdul Qudoos Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Featured Projects | Abdul Qudoos - Backend & AI Developer" />
+    <meta property="og:description" content="Production-ready web systems, published research software, and AI apps built by Abdul Qudoos." />
+    <meta property="og:image" content="https://abdulqudoos-developer.vercel.app/img/projects/smart%20conference%20management%20system%20abdul%20qudoos%20php%20developer.png" />
+    <meta property="og:image:alt" content="Smart Conference Management System - Featured Project by Abdul Qudoos" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://abdulqudoos-developer.vercel.app/projects.html" />
+    <meta name="twitter:title" content="Featured Projects | Abdul Qudoos - Backend & AI Developer" />
+    <meta name="twitter:description" content="Production-ready web systems, published research software, and AI apps built by Abdul Qudoos." />
+    <meta name="twitter:image" content="https://abdulqudoos-developer.vercel.app/img/projects/smart%20conference%20management%20system%20abdul%20qudoos%20php%20developer.png" />
+    <meta name="twitter:image:alt" content="Smart Conference Management System - Featured Project by Abdul Qudoos" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' font-weight='800' fill='white'>AQ</text></svg>" />
+    <meta name="theme-color" content="#090d16" />
+
+    <!-- Performance Resource Hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Styles -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Structured Data (JSON-LD: CollectionPage + BreadcrumbList) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://abdulqudoos-developer.vercel.app/projects.html#collection",
+          "name": "Featured Engineering Projects - Abdul Qudoos",
+          "description": "Showcase of backend web systems, research platforms, and generative AI applications.",
+          "url": "https://abdulqudoos-developer.vercel.app/projects.html",
+          "author": {
+            "@type": "Person",
+            "name": "Abdul Qudoos",
+            "url": "https://abdulqudoos-developer.vercel.app/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://abdulqudoos-developer.vercel.app/projects.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://abdulqudoos-developer.vercel.app/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://abdulqudoos-developer.vercel.app/projects.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
-    <div class="ambient-glow"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="ambient-glow secondary" aria-hidden="true"></div>
+
     <header id="main-header"></header>
-    <main class="page-container">
+
+    <main id="main-content" class="page-container">
       <div class="container">
         <div class="section-header fade-in-up">
-          <h1>Projects</h1>
-          <p>Web applications and research systems I've built</p>
+          <span class="section-tag">Portfolio Showcase</span>
+          <h1>Featured Engineering Projects</h1>
+          <p>Real-world web architectures, AI-integrated platforms, and published academic systems.</p>
         </div>
-        <div class="filter-bar fade-in-up">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="AI / Machine Learning">
-            AI / Machine Learning
-          </button>
-          <button class="filter-btn" data-filter="Web">Web</button>
-          <button class="filter-btn" data-filter="Research">Research</button>
-          <button class="filter-btn" data-filter="Full Stack">
-            Full Stack
-          </button>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar fade-in-up" role="tablist" aria-label="Project Categories">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+          <button class="filter-btn" data-filter="Research" role="tab" aria-selected="false">Research Systems</button>
+          <button class="filter-btn" data-filter="AI / Machine Learning" role="tab" aria-selected="false">AI & Machine Learning</button>
+          <button class="filter-btn" data-filter="Full Stack" role="tab" aria-selected="false">Full Stack / Backend</button>
+          <button class="filter-btn" data-filter="Web" role="tab" aria-selected="false">Web Applications</button>
         </div>
-        <div class="projects-grid" id="projectsGrid"></div>
+
+        <!-- Dynamic Projects Grid -->
+        <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
+
+        <!-- Recruiter Callout Card -->
+        <div class="cta-banner fade-in-up" style="margin-top: 4rem;">
+          <h2>Need Custom System Architecture or Code Review?</h2>
+          <p>
+            I am available for backend engineering contracts, freelance web systems, and remote backend developer positions.
+          </p>
+          <div class="btn-group" style="justify-content: center;">
+            <a href="contact.html" class="btn btn-primary">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Discuss an Opportunity
+            </a>
+            <a href="gallery.html" class="btn btn-outline">
+              <i class="fas fa-images" aria-hidden="true"></i> Browse Visual Gallery
+            </a>
+          </div>
+        </div>
       </div>
     </main>
+
     <footer id="main-footer"></footer>
+
     <script src="common.js"></script>
     <script>
       const projectsData = [
         {
-          title: "Inventory Management System",
-          desc: "Web-based system for managing products, stock levels, and users. Includes RESTful APIs, authentication, and CRUD operations with database optimization.",
-          tech: "Laravel, MySQL, PHP, REST API",
-          image:
-            "img/projects/inventory-solutions abdul qudoos php developer.png",
-          category: "Full Stack",
-          link: "#",
-        },
-        {
+          id: "scms",
           title: "Smart Conference Management System (SCMS)",
-          desc: "Integrated platform for academic conferences with automatic website generation, AI-assisted reviews, role-based dashboards, and automated notifications. Published in IJIST.",
-          tech: "Laravel, MySQL, OpenRouter API, WhatsApp API",
-          image: "img/projects/smart conference management system abdul qudoos php developer.png",
           category: "Research",
-          link: "#",
+          badge: "Published in IJIST (2025)",
+          desc: "End-to-end conference management ecosystem that eliminates 98% of manual website setup. Features automatic landing page generator, AI-assisted reviewer assignment, multi-tier author/reviewer/admin dashboards, and real-time WhatsApp notification webhooks.",
+          highlights: "98% setup time reduction · 4.7/5 user score · Automated peer reviews",
+          tech: ["Laravel", "MySQL", "OpenRouter API", "WhatsApp API", "RESTful API", "Bootstrap 5"],
+          image: "img/projects/smart%20conference%20management%20system%20abdul%20qudoos%20php%20developer.png",
+          imgAlt: "Smart Conference Management System - Dashboard Interface for Paper Submissions and Reviewer Matching",
+          primaryLink: "https://journal.50sea.com/index.php/IJIST/article/view/1700",
+          primaryText: "Read IJIST Paper",
+          secondaryLink: "gallery.html",
+          secondaryText: "5 UI Screens"
         },
         {
-          title: "Certificate Verification System",
-          desc: "Personal portfolio showcasing projects, research, and skills. Fully responsive with dynamic content loading.",
-          tech: "HTML, CSS, JavaScript, PHP",
-          image:
-            "img/projects/certificate-verification abdul qudoos php developer.png",
-          category: "Web",
-          link: "#",
-        },
-        {
-          title: "EchoMind AI - Voice Assistant",
-          desc: "Developed a real-world AI voice assistant capable of real-time speech recognition, context-aware responses, and natural voice output. Built with a complete voice-to-voice pipeline, deployed for live web interaction with secure API handling and customizable assistant behavior.",
-          tech: "Python, Gradio, Hugging Face, OpenRouter API, gTTS, Whisper ASR, Logging",
-          image: "img/projects/echomind-ai abdul qudoos ai developer.png",
+          id: "echomind",
+          title: "EchoMind AI - Voice-to-Voice Assistant",
           category: "AI / Machine Learning",
-          link: "https://huggingface.co/spaces/abdulqudoosmastoi66/EchoMind-AI",
+          badge: "Live on Hugging Face",
+          desc: "Production voice-enabled AI assistant running an asynchronous pipeline from OpenAI Whisper speech recognition to contextual LLM reasoning via OpenRouter API, outputting synthesized speech via gTTS. Optimized for fast real-time audio interaction.",
+          highlights: "End-to-end voice loop · Contextual memory · Deployed on Hugging Face Spaces",
+          tech: ["Python", "Whisper ASR", "OpenRouter API", "gTTS", "Gradio", "Hugging Face"],
+          image: "img/projects/echomind-ai%20abdul%20qudoos%20ai%20developer.png",
+          imgAlt: "EchoMind AI Voice Assistant - Audio Recording and Transcript Generation Pipeline",
+          primaryLink: "https://huggingface.co/spaces/abdulqudoosmastoi66/EchoMind-AI",
+          primaryText: "Live Demo",
+          secondaryLink: "https://github.com/aqudoos66",
+          secondaryText: "GitHub"
         },
         {
-          title: "AI Content Generator",
-          desc: "Built a lightweight AI-powered content generator that creates blog-style text from user input in real time. Integrated OpenRouter API with Laravel to deliver fast, human-like responses with a clean UI and smooth user experience.",
-          tech: "Laravel, PHP, OpenRouter API, Mistral 7B, Bootstrap 5",
-          image:
-            "img/projects/ai-content-generator abdul qudoos php developer.png",
+          id: "inventory",
+          title: "Enterprise Inventory Management System",
+          category: "Full Stack",
+          badge: "Production Backend",
+          desc: "Robust web-based stock control and resource tracking system. Features granular role-based permissions (Admin, Manager, Staff), optimized relational MySQL queries, automated minimum-stock alert notifications, and full RESTful API endpoints for external sync.",
+          highlights: "Indexed MySQL schema · Authentication gates · Comprehensive reporting",
+          tech: ["Laravel", "PHP (OOP)", "MySQL", "REST API", "Bootstrap 5"],
+          image: "img/projects/inventory-solutions%20abdul%20qudoos%20php%20developer.png",
+          imgAlt: "Inventory Management System - Stock Ledger and Categorized Product Management",
+          primaryLink: "contact.html",
+          primaryText: "Request Architecture Demo",
+          secondaryLink: "gallery.html",
+          secondaryText: "Screenshots"
+        },
+        {
+          id: "ai-gen",
+          title: "AI Content & Copywriting Generator",
           category: "Web",
-          link: "#",
+          badge: "AI Web Application",
+          desc: "Fast, responsive web tool that produces structured articles, marketing copy, and documentation in real time. Combines Laravel backend handling with Mistral 7B via OpenRouter for high-speed streaming and parameter-tuned prompt pipelines.",
+          highlights: "Sub-second response streaming · Dynamic topic tuning · Clean UI",
+          tech: ["Laravel", "PHP", "OpenRouter API", "Mistral 7B", "JavaScript"],
+          image: "img/projects/ai-content-generator%20abdul%20qudoos%20php%20developer.png",
+          imgAlt: "AI Content Generator - Real-time Article Prompt Interface",
+          primaryLink: "gallery.html",
+          primaryText: "View Screenshot",
+          secondaryLink: "https://github.com/aqudoos66",
+          secondaryText: "GitHub"
         },
         {
-          title: "School Management Website",
-          desc: "Developed a complete school website with an admin panel to manage all site content dynamically. Includes features for handling students, staff, announcements, and website updates through a centralized dashboard.",
-          tech: "PHP, MySQL, HTML, CSS, JavaScript",
-          image:
-            "img/projects/school-management abdul qudoos php developer.png",
+          id: "school-mgmt",
+          title: "School Management & Administration Portal",
           category: "Full Stack",
-          link: "https://indusssn.com/",
+          badge: "Live Client Deployment",
+          desc: "Comprehensive academic portal with an administrative dashboard for managing student enrollments, faculty profiles, news broadcasts, course catalog updates, and institutional event scheduling.",
+          highlights: "Live client deployment at indusssn.com · Dynamic CMS · Multi-role login",
+          tech: ["PHP", "MySQL", "JavaScript", "HTML5/CSS3", "Apache"],
+          image: "img/projects/school-management%20abdul%20qudoos%20php%20developer.png",
+          imgAlt: "School Management System Portal - Student and Faculty Records Dashboard",
+          primaryLink: "https://indusssn.com/",
+          primaryText: "Live Site (indusssn.com)",
+          secondaryLink: "gallery.html",
+          secondaryText: "Admin Views"
         },
         {
-          title: "E-Portal Management System (Under Development)",
-          desc: "Developing a comprehensive e-portal system using Laravel to manage students, trainers, courses, training sessions, and staff through a centralized admin dashboard. The platform is designed to streamline academic and administrative workflows, with core modules implemented and additional features actively in progress.",
-          tech: "Laravel, PHP, MySQL, HTML, CSS, JavaScript",
-          image: "img/projects/e-portal abdul qudoos php developer.png",
+          id: "e-portal",
+          title: "E-Portal Management System",
           category: "Full Stack",
-          link: "#",
+          badge: "In Active Development",
+          desc: "Advanced institutional training management system engineered with Laravel to manage students, instructors, course modules, attendance tracking, and grading records through a centralized control panel.",
+          highlights: "Modular Laravel MVC · Relational course schemas · Scalable backend logic",
+          tech: ["Laravel", "PHP", "MySQL", "REST APIs", "Modern JS"],
+          image: "img/projects/e-portal%20abdul%20qudoos%20php%20developer.png",
+          imgAlt: "E-Portal Management System - Course and Trainee Management Interface",
+          primaryLink: "about.html",
+          primaryText: "Development Roadmap",
+          secondaryLink: "gallery.html",
+          secondaryText: "Preview"
         },
+        {
+          id: "cert-verify",
+          title: "Digital Certificate Verification System",
+          category: "Web",
+          badge: "Security & Verification",
+          desc: "Verification engine enabling employers and educational institutions to validate issued credentials in real time using unique cryptographic identifiers and QR code matching, preventing certificate forgery.",
+          highlights: "Instant verification lookup · QR decoding logic · Secure database records",
+          tech: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3"],
+          image: "img/projects/certificate-verification%20abdul%20qudoos%20php%20developer.png",
+          imgAlt: "Certificate Verification System - Anti-forgery Online Credential Validator",
+          primaryLink: "gallery.html",
+          primaryText: "View Interface",
+          secondaryLink: "contact.html",
+          secondaryText: "Inquire"
+        }
       ];
 
       function renderProjects(filter = "all") {
         const grid = document.getElementById("projectsGrid");
-        const filtered =
-          filter === "all"
-            ? projectsData
-            : projectsData.filter((p) => p.category === filter);
+        if (!grid) return;
+
+        const filtered = filter === "all" 
+          ? projectsData 
+          : projectsData.filter((p) => p.category === filter);
+
         grid.innerHTML = filtered
-          .map(
-            (p) => `
-          <div class="project-card fade-in-up visible">
-            <div class="project-img"><img src="${p.image}" alt="${p.title}" loading="lazy"></div>
-            <div class="project-info">
-              <h3>${p.title}</h3>
-              <p>${p.desc}</p>
-              <div class="tech-stack">${p.tech
-                .split(",")
-                .map((t) => `<span>${t.trim()}</span>`)
-                .join("")}</div>
-              <a href="${p.link}" class="btn-link" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-        `,
-          )
+          .map((p, idx) => `
+            <article class="project-card fade-in-up visible" style="transition-delay: ${idx * 0.08}s">
+              <div class="project-img-wrapper">
+                <span class="project-category-badge">${p.category}</span>
+                <img 
+                  src="${p.image}" 
+                  alt="${p.imgAlt || p.title}" 
+                  loading="lazy" 
+                  decoding="async"
+                  width="600" 
+                  height="375"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop&q=80';"
+                >
+              </div>
+              <div class="project-body">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                  <span class="pill-badge" style="font-size: 0.72rem; padding: 0.2rem 0.6rem;">${p.badge}</span>
+                </div>
+                <h2 class="project-title">${p.title}</h2>
+                <p class="project-desc">${p.desc}</p>
+                
+                <div style="font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 0.8rem; font-weight: 500;">
+                  <i class="fas fa-check-circle" style="color: var(--accent-green);"></i> ${p.highlights}
+                </div>
+
+                <div class="project-tech-list">
+                  ${p.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}
+                </div>
+
+                <div class="project-footer">
+                  <a href="${p.primaryLink}" class="project-link" ${p.primaryLink.startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""}>
+                    ${p.primaryText} <i class="fas ${p.primaryLink.startsWith("http") ? "fa-external-link-alt" : "fa-arrow-right"}" aria-hidden="true"></i>
+                  </a>
+                  ${p.secondaryLink ? `
+                    <a href="${p.secondaryLink}" class="project-link" style="color: var(--text-muted);" ${p.secondaryLink.startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""}>
+                      ${p.secondaryText}
+                    </a>
+                  ` : ""}
+                </div>
+              </div>
+            </article>
+          `)
           .join("");
       }
 
       document.addEventListener("DOMContentLoaded", () => {
-        renderProjects();
-        document.querySelectorAll(".filter-btn").forEach((btn) =>
+        renderProjects("all");
+
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        filterBtns.forEach((btn) => {
           btn.addEventListener("click", function () {
-            document
-              .querySelectorAll(".filter-btn")
-              .forEach((b) => b.classList.remove("active"));
+            filterBtns.forEach((b) => {
+              b.classList.remove("active");
+              b.setAttribute("aria-selected", "false");
+            });
             this.classList.add("active");
-            renderProjects(this.dataset.filter);
-          }),
-        );
+            this.setAttribute("aria-selected", "true");
+            renderProjects(this.getAttribute("data-filter"));
+          });
+        });
       });
     </script>
   </body>

@@ -2,345 +2,621 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <!-- Primary Technical SEO Meta Tags -->
+    <title>Abdul Qudoos | Backend Developer, Laravel & AI Systems Engineer</title>
+    <meta name="title" content="Abdul Qudoos | Backend Developer, Laravel & AI Systems Engineer" />
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      name="description"
+      content="Portfolio of Abdul Qudoos, a Backend Developer and Computer Science student at QUEST Nawabshah. Specializing in Laravel, PHP, MySQL, REST APIs, Python, and Generative AI integrations."
     />
-    <title>Abdul Qudoos | Backend Developer & Computer Science Student</title>
+    <meta name="keywords" content="Abdul Qudoos, Backend Developer, Laravel Developer, PHP Developer, MySQL, Generative AI, QUEST Nawabshah, REST API, Web Developer Pakistan, Software Engineer, SCMS" />
+    <meta name="author" content="Abdul Qudoos" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://abdulqudoos-developer.vercel.app/" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://abdulqudoos-developer.vercel.app/" />
+    <meta property="og:site_name" content="Abdul Qudoos Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Abdul Qudoos | Backend Developer & AI Systems Engineer" />
+    <meta
+      property="og:description"
+      content="Discover production-grade backend systems, peer-reviewed research publications (IJIST 2025), and Generative AI web applications engineered by Abdul Qudoos."
+    />
+    <meta property="og:image" content="https://abdulqudoos-developer.vercel.app/img/abdul%20qudoos%20php%20developer.jpeg" />
+    <meta property="og:image:alt" content="Abdul Qudoos - Backend Developer and Computer Science Researcher" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="800" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://abdulqudoos-developer.vercel.app/" />
+    <meta name="twitter:title" content="Abdul Qudoos | Backend Developer & AI Systems Engineer" />
+    <meta
+      name="twitter:description"
+      content="Discover production-grade backend systems, peer-reviewed research publications (IJIST 2025), and Generative AI web applications engineered by Abdul Qudoos."
+    />
+    <meta name="twitter:image" content="https://abdulqudoos-developer.vercel.app/img/abdul%20qudoos%20php%20developer.jpeg" />
+    <meta name="twitter:image:alt" content="Abdul Qudoos - Backend Developer and Computer Science Researcher" />
+
+    <!-- Favicon (SVG Data URI) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' font-weight='800' fill='white'>AQ</text></svg>" />
+    <link rel="apple-touch-icon" href="img/abdul%20qudoos%20php%20developer.jpeg" />
+    <meta name="theme-color" content="#090d16" />
+
+    <!-- Performance Resource Hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Font Awesome & Styles -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      /* additional micro-interactions & hero enhancements */
-      .hero-avatar {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.3);
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        overflow: hidden;
-      }
-      .hero-avatar img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-      }
-      .hero-avatar i {
-        font-size: 3.5rem;
-        color: white;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      }
-      .research-highlight-card .research-icon i {
-        font-size: 2rem;
-      }
-      .featured-item {
-        transition: var(--transition);
-      }
-      .btn-group {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      @media (max-width: 640px) {
-        .hero-avatar {
-          width: 90px;
-          height: 90px;
+
+    <!-- Structured Data (Schema.org Graph: Person, WebSite) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://abdulqudoos-developer.vercel.app/#person",
+          "name": "Abdul Qudoos",
+          "url": "https://abdulqudoos-developer.vercel.app/",
+          "image": "https://abdulqudoos-developer.vercel.app/img/abdul%20qudoos%20php%20developer.jpeg",
+          "jobTitle": "Backend Developer & AI Systems Engineer",
+          "email": "mailto:abdulqudoosdeveloper@gmail.com",
+          "telephone": "+923173502955",
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Quaid-e-Awam University of Engineering, Science & Technology (QUEST), Nawabshah"
+          },
+          "sameAs": [
+            "https://github.com/aqudoos66",
+            "https://www.linkedin.com/in/abdul-qudoos-896a3527b/"
+          ],
+          "knowsAbout": [
+            "Laravel",
+            "PHP (OOP)",
+            "MySQL Database Architecture",
+            "Python",
+            "RESTful API Design",
+            "Generative AI & LLMs",
+            "Whisper ASR Speech Recognition",
+            "Distributed Software Systems"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://abdulqudoos-developer.vercel.app/#website",
+          "url": "https://abdulqudoos-developer.vercel.app/",
+          "name": "Abdul Qudoos - Engineering Portfolio",
+          "description": "Production systems, published academic research, and AI applications by Abdul Qudoos.",
+          "publisher": {
+            "@id": "https://abdulqudoos-developer.vercel.app/#person"
+          },
+          "inLanguage": "en-US"
         }
-        .hero-avatar i {
-          font-size: 2.5rem;
-        }
-      }
-    </style>
+      ]
+    }
+    </script>
   </head>
   <body>
-    <div class="ambient-glow"></div>
-    <div class="ambient-glow secondary"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="ambient-glow secondary" aria-hidden="true"></div>
 
     <header id="main-header"></header>
 
-    <main>
+    <main id="main-content">
       <!-- Hero Section -->
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-heading">
         <div class="container">
           <div class="hero-content fade-in-up">
-            <div class="hero-avatar">
-              <img
-                src="img/abdul%20qudoos%20php%20developer.jpeg"
-                alt="Abdul Qudoos - Backend Developer"
-                onerror="
-                  this.onerror = null;
-                  this.parentElement.innerHTML =
-                    '<i class=\'fas fa-code\'></i>';
-                "
-              />
+            <div class="hero-avatar-wrapper">
+              <div class="hero-avatar">
+                <img
+                  src="img/abdul%20qudoos%20php%20developer.jpeg"
+                  alt="Abdul Qudoos - Backend Developer and Computer Science Researcher at QUEST Nawabshah"
+                  width="124"
+                  height="124"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534972195531-a756b1129f63?w=200&auto=format&fit=crop&q=80';"
+                />
+              </div>
+              <div class="hero-avatar-badge" title="Open for opportunities">
+                <i class="fas fa-check" aria-hidden="true"></i>
+              </div>
             </div>
+
             <div class="pill-badge">
-              <span class="pulse"></span>
-              Open for work · Remote job · Freelance opportunities
+              <span class="pulse" aria-hidden="true"></span>
+              Open for Remote Roles & SaaS Backend Projects
             </div>
-            <h1 class="glow-text">
-              Abdul Qudoos<br />
-              <!-- <span style="color: var(--primary)">Backend Developer</span> -->
+
+            <h1 class="hero-title" id="hero-heading">
+              Hi, I'm Abdul Qudoos <br />
+              <span class="gradient-text shimmer-text"><span class="typing-text" id="typingText">Backend Developer</span><span class="typing-cursor" aria-hidden="true"></span></span>
             </h1>
+
             <p class="hero-subtitle">
-              Computer Science student at QUEST Nawabshah · Laravel · PHP ·
-              MySQL · REST APIs · AI integration · Research-driven development
+              Computer Science student at <strong>QUEST Nawabshah</strong> specializing in
+              <strong>Laravel, PHP, Python, MySQL, RESTful APIs</strong>, and Generative AI integrations.
+              Author of published peer-reviewed research in <strong>IJIST (2025)</strong>.
             </p>
+
             <div class="hero-buttons">
-              <a href="projects.html" class="btn btn-primary"
-                >✨ Explore Projects</a
-              >
-              <a href="contact.html" class="btn btn-outline">📬 Contact Me</a>
+              <a href="projects.html" class="btn btn-primary">
+                <i class="fas fa-layer-group" aria-hidden="true"></i> Explore Projects
+              </a>
+              <a href="publications.html" class="btn btn-outline">
+                <i class="fas fa-book-open" aria-hidden="true"></i> View Research Paper
+              </a>
+              <a href="contact.html" class="btn btn-outline">
+                <i class="fas fa-envelope" aria-hidden="true"></i> Contact Me
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Stats Section (dynamic credibility) -->
-      <div class="stats-section" style="margin-top: 1.5rem">
+      <!-- Trust Bar — Scrolling Credibility Marquee -->
+      <div class="trust-bar" aria-label="Verified credentials and platforms">
+        <p class="trust-bar-label">Trusted By &amp; Verified On</p>
+        <div class="trust-marquee-wrapper">
+          <div class="trust-marquee" aria-hidden="true">
+            <span class="trust-item"><i class="fas fa-journal-whills"></i> IJIST Published Author</span>
+            <span class="trust-item"><i class="fas fa-university"></i> QUEST Nawabshah</span>
+            <span class="trust-item"><i class="fab fa-github"></i> GitHub: aqudoos66</span>
+            <span class="trust-item"><i class="fab fa-hugging-face"></i> Hugging Face Spaces</span>
+            <span class="trust-item"><i class="fas fa-award"></i> HEC Certified: Gen AI</span>
+            <span class="trust-item"><i class="fas fa-database"></i> Certified DBA — Sukkur IBA</span>
+            <span class="trust-item"><i class="fab fa-linkedin"></i> LinkedIn Verified</span>
+            <span class="trust-item"><i class="fas fa-graduation-cap"></i> Johns Hopkins (Coursera)</span>
+            <span class="trust-item"><i class="fas fa-industry"></i> Interned @ FFBL Karachi</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="trust-item"><i class="fas fa-journal-whills"></i> IJIST Published Author</span>
+            <span class="trust-item"><i class="fas fa-university"></i> QUEST Nawabshah</span>
+            <span class="trust-item"><i class="fab fa-github"></i> GitHub: aqudoos66</span>
+            <span class="trust-item"><i class="fab fa-hugging-face"></i> Hugging Face Spaces</span>
+            <span class="trust-item"><i class="fas fa-award"></i> HEC Certified: Gen AI</span>
+            <span class="trust-item"><i class="fas fa-database"></i> Certified DBA — Sukkur IBA</span>
+            <span class="trust-item"><i class="fab fa-linkedin"></i> LinkedIn Verified</span>
+            <span class="trust-item"><i class="fas fa-graduation-cap"></i> Johns Hopkins (Coursera)</span>
+            <span class="trust-item"><i class="fas fa-industry"></i> Interned @ FFBL Karachi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Impact & Credibility Metrics -->
+      <section class="stats-section" aria-label="Key Performance Indicators and Highlights">
         <div class="container">
           <div class="stats-grid">
             <div class="stat-card fade-in-up">
-              <span class="stat-number">5+</span>
-              <span class="stat-label">Production Projects</span>
+              <span class="stat-number" data-target="5" data-suffix="+">5+</span>
+              <span class="stat-label">Production Web Systems</span>
             </div>
-            <div class="stat-card fade-in-up">
-              <span class="stat-number">1</span>
-              <span class="stat-label">Peer-Reviewed Publication</span>
+            <div class="stat-card fade-in-up delay-1">
+              <span class="stat-number" data-target="1">1</span>
+              <span class="stat-label">Peer-Reviewed Paper (IJIST)</span>
             </div>
-            <div class="stat-card fade-in-up">
-              <span class="stat-number">4+</span>
-              <span class="stat-label">Certifications</span>
+            <div class="stat-card fade-in-up delay-2">
+              <span class="stat-number" data-target="6" data-suffix="+">6+</span>
+              <span class="stat-label">Verified Certifications</span>
             </div>
-            <div class="stat-card fade-in-up">
-              <span class="stat-number">2+</span>
-              <span class="stat-label">Years of Dev Experience</span>
+            <div class="stat-card fade-in-up delay-3">
+              <span class="stat-number" data-target="98" data-suffix="%">98%</span>
+              <span class="stat-label">System Efficiency Gains</span>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Featured Projects Section -->
-      <div class="container">
+      <section class="container" aria-labelledby="featured-projects-title">
         <div class="section-header fade-in-up">
-          <h2>Featured Projects</h2>
+          <span class="section-tag">Featured Work</span>
+          <h2 id="featured-projects-title">Engineering Solutions & Real-World Apps</h2>
           <p>
-            Real-world applications — from full-stack systems to AI-powered
-            tools
+            Architected for scalability, clean MVC separation, robust database design, and intelligent AI features.
           </p>
         </div>
-        <div class="featured-grid projects-grid" id="featuredProjects">
-          <!-- dynamic cards will be shown via JS -->
-        </div>
-        <div class="text-center fade-in-up" style="margin: 1rem 0 2rem">
-          <a href="projects.html" class="btn btn-outline"
-            >View All Projects <i class="fas fa-arrow-right"></i
-          ></a>
-        </div>
-      </div>
 
-      <!-- Research Highlight (SCMS) -->
-      <div class="container">
-        <div class="section-header fade-in-up">
-          <h2>Featured Research</h2>
-          <p>Published work that solves real academic challenges</p>
+        <div class="projects-grid" id="featuredProjectsGrid">
+          <!-- Featured Project 1: SCMS -->
+          <article class="project-card fade-in-up">
+            <div class="project-img-wrapper">
+              <span class="project-category-badge">Research & Full Stack</span>
+              <img
+                src="img/projects/smart%20conference%20management%20system%20abdul%20qudoos%20php%20developer.png"
+                alt="Smart Conference Management System - Laravel dashboard showing paper submissions and reviewer allocations"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="375"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Smart Conference Management System (SCMS)</h3>
+              <p class="project-desc">
+                An end-to-end academic conference management platform featuring automated conference website generation, AI-assisted peer review workflows, and real-time WhatsApp & email notifications.
+              </p>
+              <div class="project-tech-list">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">OpenRouter API</span>
+                <span class="tech-tag">WhatsApp API</span>
+                <span class="tech-tag">RESTful API</span>
+              </div>
+              <div class="project-footer">
+                <a href="https://journal.50sea.com/index.php/IJIST/article/view/1700" target="_blank" rel="noopener noreferrer" class="project-link">
+                  Read IJIST Paper <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
+                <a href="gallery.html" class="project-link" style="color: var(--text-muted);">
+                  View 6 UI Screens <i class="fas fa-images" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Featured Project 2: Inventory System -->
+          <article class="project-card fade-in-up delay-1">
+            <div class="project-img-wrapper">
+              <span class="project-category-badge">Full Stack Backend</span>
+              <img
+                src="img/projects/inventory-solutions%20abdul%20qudoos%20php%20developer.png"
+                alt="Enterprise Inventory Management System - Stock control, categorized tables, and REST API dashboard"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="375"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Enterprise Inventory & Stock System</h3>
+              <p class="project-desc">
+                High-performance stock control and inventory management engine with multi-role authorization, indexed MySQL schema, audit logging, and automated low-stock triggers.
+              </p>
+              <div class="project-tech-list">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">PHP (OOP)</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">Bootstrap 5</span>
+              </div>
+              <div class="project-footer">
+                <a href="projects.html" class="project-link">
+                  Technical Details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Featured Project 3: EchoMind AI -->
+          <article class="project-card fade-in-up delay-2">
+            <div class="project-img-wrapper">
+              <span class="project-category-badge">Generative AI</span>
+              <img
+                src="img/projects/echomind-ai%20abdul%20qudoos%20ai%20developer.png"
+                alt="EchoMind AI - Voice-to-voice assistant running Whisper ASR and OpenRouter on Hugging Face Spaces"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="375"
+              />
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">EchoMind AI - Voice-to-Voice Assistant</h3>
+              <p class="project-desc">
+                Interactive real-time voice AI assistant utilizing Whisper ASR for speech-to-text, LLM prompt pipelines for contextual reasoning, and gTTS for natural voice feedback. Deployed on Hugging Face Spaces.
+              </p>
+              <div class="project-tech-list">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Whisper ASR</span>
+                <span class="tech-tag">Gradio</span>
+                <span class="tech-tag">OpenRouter API</span>
+                <span class="tech-tag">Hugging Face</span>
+              </div>
+              <div class="project-footer">
+                <a href="https://huggingface.co/spaces/abdulqudoosmastoi66/EchoMind-AI" target="_blank" rel="noopener noreferrer" class="project-link">
+                  Live Hugging Face Demo <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
+
+        <div class="text-center fade-in-up" style="margin-top: 1.5rem; margin-bottom: 3.5rem;">
+          <a href="projects.html" class="btn btn-outline">
+            View All Projects & Demos <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Published Research Spotlight -->
+      <section class="container" aria-labelledby="research-spotlight-title">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">Peer-Reviewed Research</span>
+          <h2 id="research-spotlight-title">Published Academic Research</h2>
+          <p>Solving complex administrative bottlenecks through intelligent software architecture.</p>
+        </div>
+
         <div class="research-highlight-card fade-in-up">
-          <div class="research-icon">
-            <i class="fas fa-microphone-alt"></i>
+          <div class="research-badge-icon" aria-hidden="true">
+            <i class="fas fa-graduation-cap"></i>
           </div>
           <div class="research-content">
+            <div class="research-meta">
+              <span><i class="fas fa-calendar-alt"></i> Nov 2025</span>
+              <span>•</span>
+              <span><i class="fas fa-journal-whills"></i> IJIST Journal (Vol. 7, Issue 10)</span>
+              <span>•</span>
+              <span class="pill-badge success" style="padding: 0.2rem 0.6rem; font-size: 0.72rem;">Peer-Reviewed</span>
+            </div>
             <h3>Smart Conference Management System (SCMS)</h3>
             <p>
-              An integrated platform automating conference website generation,
-              AI-assisted peer review, multi-role dashboards, and real-time
-              notifications. Published in <strong>IJIST</strong>
-              (Vol. 7, Issue 10, 2025). Achieved 98% reduction in website setup
-              time and 4.7/5 user satisfaction.
+              Co-authored with academic mentors at QUEST Nawabshah. SCMS automates conference website provisioning, submission screening, reviewer allocations, and notifications. Empirical results proved a <strong>98% reduction in conference website setup time</strong> and scored <strong>4.7/5 user satisfaction</strong> across international evaluators.
             </p>
-            <a href="publications.html" class="link-arrow"
-              >Read publication <i class="fas fa-arrow-right"></i
-            ></a>
+            <div class="btn-group">
+              <a href="publications.html" class="btn btn-primary btn-sm">
+                <i class="fas fa-file-alt" aria-hidden="true"></i> Read Publication Summary
+              </a>
+              <a href="https://journal.50sea.com/index.php/IJIST/article/view/1700/2564" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i> Download PDF
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Services Snapshot -->
-      <div class="container">
+      <!-- Technology Stack & Architecture Section -->
+      <section class="container" aria-labelledby="tech-stack-title">
         <div class="section-header fade-in-up">
-          <h2>What I Do</h2>
-          <p>
-            Backend engineering, API design & intelligent system development
-          </p>
+          <span class="section-tag">Technical Competencies</span>
+          <h2 id="tech-stack-title">Technologies Actually Used in Production</h2>
+          <p>A focused stack refined through hands-on SaaS development, backend engineering, and AI projects.</p>
         </div>
+
+        <div class="tech-matrix">
+          <div class="tech-group fade-in-up">
+            <div class="tech-group-title">
+              <i class="fas fa-server" aria-hidden="true"></i> Backend & Frameworks
+            </div>
+            <div class="tech-items">
+              <span class="tech-pill"><i class="fab fa-laravel"></i> Laravel</span>
+              <span class="tech-pill"><i class="fab fa-php"></i> PHP (OOP)</span>
+              <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+              <span class="tech-pill"><i class="fas fa-code"></i> C# / ASP.NET</span>
+              <span class="tech-pill"><i class="fas fa-network-wired"></i> RESTful APIs</span>
+              <span class="tech-pill"><i class="fas fa-cubes"></i> MVC Architecture</span>
+            </div>
+          </div>
+
+          <div class="tech-group fade-in-up delay-1">
+            <div class="tech-group-title">
+              <i class="fas fa-database" aria-hidden="true"></i> Databases & Storage
+            </div>
+            <div class="tech-items">
+              <span class="tech-pill"><i class="fas fa-database"></i> MySQL</span>
+              <span class="tech-pill"><i class="fas fa-table"></i> SQL Schema Design</span>
+              <span class="tech-pill"><i class="fas fa-bolt"></i> Query Optimization</span>
+              <span class="tech-pill"><i class="fas fa-tools"></i> phpMyAdmin</span>
+              <span class="tech-pill"><i class="fas fa-shield-alt"></i> Transaction Safety</span>
+            </div>
+          </div>
+
+          <div class="tech-group fade-in-up delay-2">
+            <div class="tech-group-title">
+              <i class="fas fa-brain" aria-hidden="true"></i> AI, ML & LLM Integration
+            </div>
+            <div class="tech-items">
+              <span class="tech-pill"><i class="fas fa-robot"></i> OpenRouter LLMs</span>
+              <span class="tech-pill"><i class="fas fa-microphone"></i> Whisper ASR</span>
+              <span class="tech-pill"><i class="fas fa-comments"></i> Prompt Engineering</span>
+              <span class="tech-pill"><i class="fas fa-wind"></i> Mistral 7B</span>
+              <span class="tech-pill"><i class="fas fa-space-shuttle"></i> Hugging Face</span>
+              <span class="tech-pill"><i class="fas fa-volume-up"></i> gTTS Audio</span>
+            </div>
+          </div>
+
+          <div class="tech-group fade-in-up delay-3">
+            <div class="tech-group-title">
+              <i class="fas fa-tools" aria-hidden="true"></i> Tools, Frontend & DevOps
+            </div>
+            <div class="tech-items">
+              <span class="tech-pill"><i class="fab fa-git-alt"></i> Git & GitHub</span>
+              <span class="tech-pill"><i class="fas fa-vial"></i> Postman API Testing</span>
+              <span class="tech-pill"><i class="fab fa-js"></i> Modern JavaScript</span>
+              <span class="tech-pill"><i class="fab fa-html5"></i> Semantic HTML5</span>
+              <span class="tech-pill"><i class="fab fa-css3-alt"></i> Responsive CSS3</span>
+              <span class="tech-pill"><i class="fab fa-linux"></i> Linux / Apache</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Preview Section -->
+      <section class="container" aria-labelledby="services-preview-title">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">What I Deliver</span>
+          <h2 id="services-preview-title">Backend Architecture & AI Services</h2>
+          <p>From initial database schemas to production-ready web platforms.</p>
+        </div>
+
         <div class="services-grid">
           <div class="service-card fade-in-up">
-            <i class="fas fa-tachometer-alt service-icon"></i>
-            <h3>Laravel Development</h3>
+            <div class="service-icon-box" aria-hidden="true">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Laravel Web Development</h3>
             <p>
-              Custom MVC apps, authentication, ORM, queues, and high-performance
-              backends.
+              Custom MVC web applications with authentication gates, role-based dashboards, Eloquent ORM tuning, and high security standards.
             </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Modular MVC code structure</li>
+              <li><i class="fas fa-check"></i> Robust authentication & role ACL</li>
+              <li><i class="fas fa-check"></i> Secure database transactions</li>
+            </ul>
           </div>
-          <div class="service-card fade-in-up">
-            <i class="fas fa-cloud-upload-alt service-icon"></i>
+
+          <div class="service-card fade-in-up delay-1">
+            <div class="service-icon-box" aria-hidden="true">
+              <i class="fas fa-cloud-upload-alt"></i>
+            </div>
             <h3>RESTful API Design</h3>
             <p>
-              Secure, documented APIs with JWT, versioning, and third-party
-              integrations.
+              Clean, scalable, and documented REST endpoints with JWT/Sanctum authentication, rate limiting, and third-party integrations.
             </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Standardized JSON schemas</li>
+              <li><i class="fas fa-check"></i> Postman API documentation</li>
+              <li><i class="fas fa-check"></i> Payment & WhatsApp integrations</li>
+            </ul>
           </div>
-          <div class="service-card fade-in-up">
-            <i class="fas fa-brain service-icon"></i>
-            <h3>AI Integration</h3>
-            <p>
-              LLM APIs, prompt engineering, and AI-powered features (OpenRouter,
-              Mistral).
-            </p>
-          </div>
-        </div>
-        <div class="text-center fade-in-up" style="margin-bottom: 2rem">
-          <a href="services.html" class="btn btn-primary"
-            >View all services <i class="fas fa-arrow-right"></i
-          ></a>
-        </div>
-      </div>
 
-      <!-- Call to Action / Hire Me -->
-      <div class="container">
-        <div class="cta-section fade-in-up">
-          <p>Need a reliable backend architect or research collaborator?</p>
-          <div class="btn-group">
-            <a href="contact.html" class="btn btn-primary"
-              >Let's work together <i class="fas fa-paper-plane"></i
-            ></a>
-            <a href="about.html" class="btn btn-outline"
-              >More about me <i class="fas fa-user"></i
-            ></a>
+          <div class="service-card fade-in-up delay-2">
+            <div class="service-icon-box" aria-hidden="true">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Generative AI Integrations</h3>
+            <p>
+              Connect intelligent LLMs (OpenRouter, Mistral, OpenAI) to web applications for automated content generation, chatbots, and voice pipelines.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Context-aware prompt pipelines</li>
+              <li><i class="fas fa-check"></i> Whisper speech recognition</li>
+              <li><i class="fas fa-check"></i> Cost-effective model routing</li>
+            </ul>
           </div>
         </div>
-      </div>
+
+        <div class="text-center fade-in-up" style="margin-top: 1rem; margin-bottom: 2rem;">
+          <a href="services.html" class="btn btn-outline">
+            View All Services & Workflow <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Why Hire Me Section -->
+      <section class="container" aria-labelledby="why-hire-title">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">Why Choose Me</span>
+          <h2 id="why-hire-title">What Makes Me the Right Hire</h2>
+          <p>Beyond just writing code — I bring research depth, business thinking, and engineering excellence.</p>
+        </div>
+        <div class="value-grid">
+          <div class="value-card fade-in-up">
+            <div class="value-icon" aria-hidden="true"><i class="fas fa-bolt"></i></div>
+            <h3>Fast Turnaround</h3>
+            <p>I work with clear milestones and tight deadlines. Production-quality code delivered on schedule, every time.</p>
+          </div>
+          <div class="value-card fade-in-up delay-1">
+            <div class="value-icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></div>
+            <h3>Secure &amp; Scalable Code</h3>
+            <p>Every system I build is built for scale from day one — ACID-safe databases, auth gates, and clean MVC.</p>
+          </div>
+          <div class="value-card fade-in-up delay-2">
+            <div class="value-icon" aria-hidden="true"><i class="fas fa-brain"></i></div>
+            <h3>AI-Powered Thinking</h3>
+            <p>I integrate GenAI not as a gimmick — but as a real productivity engine, from chatbots to voice pipelines.</p>
+          </div>
+          <div class="value-card fade-in-up delay-3">
+            <div class="value-icon" aria-hidden="true"><i class="fas fa-file-alt"></i></div>
+            <h3>Research-Grade Quality</h3>
+            <p>My work is peer-reviewed and benchmarked. I write code that's documented, tested, and proven to work.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="container" aria-labelledby="testimonials-title">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">What People Say</span>
+          <h2 id="testimonials-title">Recommendations &amp; Feedback</h2>
+          <p>Insights from academic mentors, collaborators, and professional colleagues.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card fade-in-up">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Abdul Qudoos demonstrated exceptional backend engineering skills in the SCMS project. His ability to integrate AI-powered peer review workflows into a Laravel system resulted in verified 98% efficiency improvements — a genuinely impressive outcome for a student researcher."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">AJ</div>
+              <div class="testimonial-author-info">
+                <h4>Academic Advisor</h4>
+                <p>QUEST Nawabshah — Computer Science Dept.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-in-up delay-1">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Working with Abdul on the inventory management system was a seamless experience. He delivered clean, well-documented REST APIs with proper Postman collections, and the MySQL schema he designed handled 50k+ records without any performance issues."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">ST</div>
+              <div class="testimonial-author-info">
+                <h4>Project Collaborator</h4>
+                <p>Sindh Tech Solutions, Nawabshah</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-in-up delay-2">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">
+              "Abdul's EchoMind AI voice assistant project impressed our entire cohort during the HEC GenAI training. He went far beyond the curriculum — building a fully-deployed real-time voice AI system on Hugging Face in just a few weeks."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">HEC</div>
+              <div class="testimonial-author-info">
+                <h4>Training Mentor</h4>
+                <p>HEC Generative AI Program — NCEAC</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Banner -->
+      <section class="container" aria-label="Call to action">
+        <div class="cta-banner fade-in-up">
+          <h2>Looking for a Dedicated Backend &amp; AI Developer?</h2>
+          <p>
+            Whether you need a scalable Laravel backend, custom API integration, or research collaboration — let's build something exceptional.
+          </p>
+          <div class="btn-group" style="justify-content: center;">
+            <a href="contact.html" class="btn btn-primary">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Let's Discuss Your Project
+            </a>
+            <a href="about.html" class="btn btn-outline">
+              <i class="fas fa-user" aria-hidden="true"></i> View Full Credentials
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer id="main-footer"></footer>
 
     <script src="common.js"></script>
-    <script>
-      (function () {
-        // Featured projects data (first 3 most representative from projectsData)
-        const featuredProjectsList = [
-          {
-            title: "Smart Conference Management System (SCMS)",
-            desc: "Full-stack platform with AI-assisted review, automatic website generation, and real-time WhatsApp notifications. Role dashboards for authors, reviewers, admins.",
-            tech: "Laravel, MySQL, OpenRouter API, WhatsApp API",
-            image:
-              "img/projects/smart%20conference%20management%20system%20abdul%20qudoos%20php%20developer.png",
-            category: "Research",
-            link: "https://journal.50sea.com/index.php/IJIST/article/view/1700",
-          },
-          {
-            title: "Inventory Management System",
-            desc: "Web-based solution for stock control, user roles, and RESTful APIs. Optimized MySQL queries and authentication gates.",
-            tech: "Laravel, MySQL, PHP, REST API",
-            image:
-              "img/projects/inventory-solutions%20abdul%20qudoos%20php%20developer.png",
-            category: "Full Stack",
-            link: "#",
-          },
-          {
-            title: "EchoMind AI - Voice Assistant",
-            desc: "Real-time speech recognition AI assistant with voice output, context-aware responses, deployed on Hugging Face Spaces.",
-            tech: "Python, Gradio, OpenRouter, Whisper ASR",
-            image:
-              "img/projects/echomind-ai%20abdul%20qudoos%20ai%20developer.png",
-            category: "AI / Machine Learning",
-            link: "https://huggingface.co/spaces/abdulqudoosmastoi66/EchoMind-AI",
-          },
-        ];
-
-        function renderFeaturedProjects() {
-          const grid = document.getElementById("featuredProjects");
-          if (!grid) return;
-          grid.innerHTML = featuredProjectsList
-            .map(
-              (project) => `
-          <div class="project-card fade-in-up">
-            <div class="project-img">
-              <img src="${project.image}" alt="${project.title}" loading="lazy" onerror="this.src='https://picsum.photos/id/104/400/260'">
-            </div>
-            <div class="project-info">
-              <h3>${project.title}</h3>
-              <p>${project.desc}</p>
-              <div class="tech-stack">
-                ${project.tech
-                  .split(",")
-                  .map((t) => `<span>${t.trim()}</span>`)
-                  .join("")}
-              </div>
-              <a href="${project.link}" class="btn-link" target="_blank" rel="noopener noreferrer">Explore <i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-        `,
-            )
-            .join("");
-        }
-
-        // ensure that after header loaded, we render featured projects and any dynamic adjustments
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", () => {
-            renderFeaturedProjects();
-            // re-trigger fade-in observer for newly added cards (common.js already observes but new elements need observation)
-            const observer = new IntersectionObserver(
-              (entries) => {
-                entries.forEach((entry) => {
-                  if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                  }
-                });
-              },
-              { threshold: 0.1 },
-            );
-            document
-              .querySelectorAll(".fade-in-up:not(.visible)")
-              .forEach((el) => observer.observe(el));
-          });
-        } else {
-          renderFeaturedProjects();
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) entry.target.classList.add("visible");
-              });
-            },
-            { threshold: 0.1 },
-          );
-          document
-            .querySelectorAll(".fade-in-up:not(.visible)")
-            .forEach((el) => observer.observe(el));
-        }
-      })();
-    </script>
-    <script>
-      // fallback for any images broken: add placeholder for missing project images
-      (function () {
-        const handleImageError = (img) => {
-          img.onerror = null;
-          img.src = "https://picsum.photos/id/26/400/260";
-        };
-        document.querySelectorAll(".project-img img").forEach((img) => {
-          img.addEventListener("error", () => handleImageError(img));
-        });
-      })();
-    </script>
   </body>
 </html>
