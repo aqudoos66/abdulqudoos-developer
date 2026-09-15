@@ -1,0 +1,7 @@
+(function(){
+  const toggle=document.querySelector('.menu-toggle'), nav=document.querySelector('.nav-links');
+  if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));}
+  const path=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.nav-links a').forEach(a=>{if(a.getAttribute('href')===path)a.classList.add('active')});
+  const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%5)*45+'ms';observer.observe(el)});
+  const form=document.querySelector('#contact-form');if(form){form.addEventListener('submit',e=>{e.preventDefault();const name=form.name.value.trim(),email=form.email.value.trim(),subject=form.subject.value.trim(),message=form.message.value.trim();if(!name||!email||!subject||!message||!/^\S+@\S+\.\S+$/.test(email)){form.querySelector('.form-note').textContent='Please complete every field with a valid email address.';form.querySelector('.form-note').style.color='#c2414b';return}const text=`Hello Abdul,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;window.location.href='https://wa.me/923173502955?text='+encodeURIComponent(text)});}
+})();
